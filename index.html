@@ -47,17 +47,17 @@
     <div class="cols" id="gallery-zone">
 
       <div class="col col--up" id="col-up" data-category="makeup">
-        <div class="item" id="makeup-1" tabindex="0" data-category="makeup" data-title="Metalhead Magazine">
+        <div class="item" id="makeup-1" tabindex="0" data-category="makeup" data-title="BON Magazine" data-gallery="bon">
           <img src="assets/images/grid-01.jpg" alt="High fashion floral editorial portrait" style="object-position:48.4% 35.2%" width="600" height="750" decoding="async">
-          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Metalhead Magazine</div>
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">BON Magazine</div>
         </div>
-        <div class="item" id="makeup-2" tabindex="0" data-category="makeup" data-title="WRPD Magazine">
+        <div class="item" id="makeup-2" tabindex="0" data-category="makeup">
           <img src="assets/images/grid-02.jpg" alt="High fashion red skirt editorial" width="819" height="1024" loading="lazy" decoding="async">
-          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">WRPD Magazine</div>
+          <div class="item__dim" aria-hidden="true"></div>
         </div>
-        <div class="item" id="makeup-3" tabindex="0" data-category="makeup" data-title="Vogue CS">
+        <div class="item" id="makeup-3" tabindex="0" data-category="makeup">
           <img src="assets/images/grid-03.jpg" alt="Avant garde fashion pose" width="890" height="1024" loading="lazy" decoding="async">
-          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Vogue CS</div>
+          <div class="item__dim" aria-hidden="true"></div>
         </div>
         <div class="item" id="makeup-4" tabindex="0" data-category="makeup">
           <img src="assets/images/grid-04.webp" alt="Red-lit fashion editorial" style="object-position:48% 31.7%" width="819" height="1024" loading="lazy" decoding="async">
@@ -71,13 +71,13 @@
       </div>
 
       <div class="col col--down" id="col-down" data-category="digital">
-        <div class="item" id="digital-1" tabindex="0" data-category="digital" data-title="Personal Project">
+        <div class="item" id="digital-1" tabindex="0" data-category="digital">
           <img src="assets/images/grid-07.png" alt="White dress high fashion editorial" width="768" height="1024" decoding="async">
-          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Personal Project</div>
+          <div class="item__dim" aria-hidden="true"></div>
         </div>
-        <div class="item item--bordered" id="digital-2" tabindex="0" data-category="digital" data-title="Mamika Suzuki">
+        <div class="item item--bordered" id="digital-2" tabindex="0" data-category="digital">
           <img src="assets/images/grid-08.svg" alt="ACTE" style="object-fit:contain" width="283" height="231" loading="lazy" decoding="async">
-          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Mamika Suzuki</div>
+          <div class="item__dim" aria-hidden="true"></div>
         </div>
         <div class="item" id="digital-3" tabindex="0" data-category="digital">
           <img src="assets/images/grid-09.jpg" alt="Black gloves luxury editorial" width="819" height="1024" loading="lazy" decoding="async">
@@ -113,29 +113,23 @@
     <div class="overlay__backdrop" id="overlay-backdrop"></div>
     <div class="overlay__veil"></div>
     <section class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
-      <div class="gallery__main"><img src="assets/images/grid-03.jpg" alt="Makeup editorial for BON Magazine"></div>
+      <div class="gallery__main"><img id="gallery-main-img" src="assets/images/bon/main.jpg" alt="BON Magazine editorial"></div>
 
       <div class="gallery__heading">
         <h2 id="gallery-title">BON Magazine</h2>
-        <button class="info-btn" id="info-btn" type="button" aria-expanded="false" aria-controls="gallery-details" aria-label="Toggle credits">
+        <button class="info-btn" id="info-btn" type="button" aria-expanded="false" aria-controls="gallery-details" aria-label="Toggle credits" hidden>
           <svg class="icon" aria-hidden="true"><use id="info-icon" href="#i-down"/></svg>
         </button>
       </div>
 
-      <div class="gallery__details" id="gallery-details" hidden>
-        <p class="credit-heading">credits</p>
-        <p>Photographer - Cornelia Wahlberg</p>
-        <p>Nails - Danielle Lundgren</p>
-        <p>Makeup - Johanna Nordlander.</p>
-        <p>Hair stylist - Amanda Lund</p>
-      </div>
+      <div class="gallery__details" id="gallery-details" hidden></div>
 
-      <div class="gallery__supporting">
-        <div class="photo photo--wide"><img src="assets/images/gallery-2.jpg" alt="" loading="lazy"></div>
-        <div class="photo photo--wide"><img src="assets/images/gallery-3.jpg" alt="" style="object-position:49.3% 28.8%" loading="lazy"></div>
-        <div class="photo photo--tall"><img src="assets/images/gallery-4.jpg" alt="" loading="lazy"></div>
-        <div class="photo photo--tall"><img src="assets/images/gallery-5.jpg" alt="" loading="lazy"></div>
-        <div class="photo photo--wide"><img src="assets/images/gallery-6.jpg" alt="" style="object-position:47.2% 26.1%" loading="lazy"></div>
+      <div class="gallery__supporting" id="gallery-supporting">
+        <div class="photo photo--wide"><img src="assets/images/bon/supporting-1.jpg" alt="" loading="lazy"></div>
+        <div class="photo photo--wide"><img src="assets/images/bon/supporting-2.jpg" alt="" loading="lazy"></div>
+        <div class="photo photo--tall"><img src="assets/images/bon/supporting-3.jpg" alt="" loading="lazy"></div>
+        <div class="photo photo--tall"><img src="assets/images/bon/supporting-4.jpg" alt="" loading="lazy"></div>
+        <div class="photo photo--wide"><img src="assets/images/bon/supporting-5.jpg" alt="" loading="lazy"></div>
       </div>
 
       <a class="goup goup--panel" href="#" id="panel-goup">

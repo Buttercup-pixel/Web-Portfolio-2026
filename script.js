@@ -84,7 +84,10 @@
     window.addEventListener('scroll', () => { /* keep label attached to pointer position */ }, { passive: true });
   }
 
-  /* ---------- Gallery overlay ---------- */
+  /* ---------- Gallery overlay ----------
+     Only items with real, verified gallery content (data-gallery) open the
+     overlay — matching the live site, where the other grid images are not
+     wired to any project gallery yet. */
   const overlay = $('#overlay');
   const panel = $('#panel');
   const infoBtn = $('#info-btn');
@@ -92,7 +95,16 @@
   const details = $('#gallery-details');
   const title = $('#gallery-title');
   const nextBtn = $('#next-btn');
+  const mainImg = $('#gallery-main-img');
   let lastFocus = null;
+
+  const galleries = {
+    bon: {
+      title: 'BON Magazine',
+      mainSrc: 'assets/images/bon/main.jpg',
+      mainAlt: 'BON Magazine editorial',
+    },
+  };
 
   function setInfo(open) {
     details.hidden = !open;
@@ -104,6 +116,12 @@
   }
 
   function openGallery(trigger) {
+    const key = trigger && trigger.dataset && trigger.dataset.gallery;
+    const data = key && galleries[key];
+    if (!data) return; // no verified content for this item yet
+    title.textContent = data.title;
+    mainImg.src = data.mainSrc;
+    mainImg.alt = data.mainAlt;
     lastFocus = trigger || document.activeElement;
     closeAbout(true);
     setInfo(false);
@@ -123,7 +141,7 @@
   panel.style.outline = 'none';
   panel.addEventListener('scroll', syncNext, { passive: true });
 
-  $$('.item').forEach((item) => {
+  $$('.item[data-gallery]').forEach((item) => {
     item.addEventListener('click', () => openGallery(item));
     item.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openGallery(item); }
