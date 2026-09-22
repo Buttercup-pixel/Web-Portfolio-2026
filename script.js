@@ -93,7 +93,6 @@
   const panel = $('#panel');
   const title = $('#gallery-title');
   const infoBtn = $('#info-btn');
-  const infoIcon = $('#info-icon');
   const details = $('#gallery-details');
   const nextBtn = $('#next-btn');
   const mainImg = $('#gallery-main-img');
@@ -120,9 +119,9 @@
     nextBtn.classList.toggle('is-visible', panel.scrollTop > 24);
   }
   function setInfo(open) {
-    details.hidden = !open;
+    details.classList.toggle('is-open', open);
+    infoBtn.classList.toggle('is-open', open);
     infoBtn.setAttribute('aria-expanded', String(open));
-    infoIcon.setAttribute('href', open ? '#i-chevron-up' : '#i-down');
   }
 
   function openGallery(trigger) {
@@ -161,8 +160,8 @@
 
   $('#overlay-backdrop').addEventListener('click', closeGallery);
 
-  infoBtn.addEventListener('click', (e) => { e.stopPropagation(); setInfo(details.hidden); });
-  title.addEventListener('click', (e) => { e.stopPropagation(); setInfo(details.hidden); });
+  infoBtn.addEventListener('click', (e) => { e.stopPropagation(); setInfo(!details.classList.contains('is-open')); });
+  title.addEventListener('click', (e) => { e.stopPropagation(); setInfo(!details.classList.contains('is-open')); });
 
   // Click anywhere inside the panel that isn't a photo (or the credits
   // accordion) closes it too.
