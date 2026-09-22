@@ -92,6 +92,9 @@
   const overlay = $('#overlay');
   const panel = $('#panel');
   const title = $('#gallery-title');
+  const infoBtn = $('#info-btn');
+  const infoIcon = $('#info-icon');
+  const details = $('#gallery-details');
   const nextBtn = $('#next-btn');
   const mainImg = $('#gallery-main-img');
   const supportingImgs = $$('#gallery-supporting img');
@@ -116,6 +119,11 @@
   function syncNext() {
     nextBtn.classList.toggle('is-visible', panel.scrollTop > 24);
   }
+  function setInfo(open) {
+    details.hidden = !open;
+    infoBtn.setAttribute('aria-expanded', String(open));
+    infoIcon.setAttribute('href', open ? '#i-chevron-up' : '#i-down');
+  }
 
   function openGallery(trigger) {
     const key = trigger && trigger.dataset && trigger.dataset.gallery;
@@ -127,6 +135,7 @@
     supportingImgs.forEach((img, i) => { img.src = data.supporting[i]; });
     lastFocus = trigger || document.activeElement;
     closeAbout(true);
+    setInfo(false);
     overlay.hidden = false;
     panel.scrollTop = 0;
     syncNext();
@@ -152,7 +161,11 @@
 
   $('#overlay-backdrop').addEventListener('click', closeGallery);
 
-  // Click anywhere inside the panel that isn't a photo closes it too.
+  infoBtn.addEventListener('click', (e) => { e.stopPropagation(); setInfo(details.hidden); });
+  title.addEventListener('click', (e) => { e.stopPropagation(); setInfo(details.hidden); });
+
+  // Click anywhere inside the panel that isn't a photo (or the credits
+  // accordion) closes it too.
   panel.addEventListener('click', (e) => {
     if (e.target.tagName === 'IMG') return;
     closeGallery();
