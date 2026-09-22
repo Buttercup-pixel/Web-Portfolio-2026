@@ -390,7 +390,13 @@ img { display: block; }
   .goup--page, .goup--panel, .hint { animation: none; }
 }
 
-/* ---------- About overlay ---------- */
+/* ---------- About overlay ----------
+   Opens instantly (no fade), unlike the gallery panel. */
+#about .overlay__backdrop,
+#about .overlay__veil,
+.about {
+  animation: none;
+}
 .about {
   position: fixed; inset: 0;
   z-index: 4;
@@ -400,7 +406,6 @@ img { display: block; }
   gap: 20px;
   scrollbar-width: none;
   outline: none;
-  animation: fade-in 300ms ease both;
 }
 .about::-webkit-scrollbar { display: none; }
 .about > * { width: min(780px, 100%); flex: none; }
