@@ -32,7 +32,7 @@
   <!-- Header -->
   <header class="header" data-name="Header">
     <div class="header__inner">
-      <p class="header__name">johanna nordlander</p>
+      <button class="header__name" id="brand-btn" type="button">johanna nordlander</button>
       <div class="header__roles">
         <p>makeup artist</p>
         <p>art director</p>
@@ -51,42 +51,48 @@
           <img src="assets/images/grid-01.jpg" alt="High fashion floral editorial portrait" style="object-position:48.4% 35.2%" width="600" height="750" decoding="async">
           <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">BON Magazine</div>
         </div>
-        <div class="item" id="makeup-2" tabindex="0" data-category="makeup">
+        <div class="item" id="makeup-2" tabindex="0" data-category="makeup" data-title="WRPD Magazine" data-gallery="wrpd">
           <img src="assets/images/grid-02.jpg" alt="High fashion red skirt editorial" width="819" height="1024" loading="lazy" decoding="async">
-          <div class="item__dim" aria-hidden="true"></div>
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">WRPD Magazine</div>
         </div>
-        <div class="item" id="makeup-3" tabindex="0" data-category="makeup">
+        <div class="item" id="makeup-3" tabindex="0" data-category="makeup" data-title="Vogue CS" data-gallery="vogue">
           <img src="assets/images/grid-03.jpg" alt="Avant garde fashion pose" width="890" height="1024" loading="lazy" decoding="async">
-          <div class="item__dim" aria-hidden="true"></div>
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Vogue CS</div>
         </div>
-        <div class="item" id="makeup-4" tabindex="0" data-category="makeup">
+        <div class="item" id="makeup-4" tabindex="0" data-category="makeup" data-title="Metalhead Magazine" data-gallery="metalhead">
           <img src="assets/images/grid-04.webp" alt="Red-lit fashion editorial" style="object-position:48% 31.7%" width="819" height="1024" loading="lazy" decoding="async">
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Metalhead Magazine</div>
         </div>
-        <div class="item" id="makeup-5" tabindex="0" data-category="makeup">
+        <div class="item" id="makeup-5" tabindex="0" data-category="makeup" data-title="Studio Editorial" data-gallery="studio">
           <img src="assets/images/grid-05.jpg" alt="Blue couture editorial portrait" style="object-position:53.2% 43.8%" width="835" height="1024" loading="lazy" decoding="async">
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Studio Editorial</div>
         </div>
-        <div class="item" id="makeup-6" tabindex="0" data-category="makeup">
+        <div class="item" id="makeup-6" tabindex="0" data-category="makeup" data-title="Red Editorial" data-gallery="reddress">
           <img src="assets/images/grid-06.jpg" alt="Red dress fashion editorial" width="694" height="1024" loading="lazy" decoding="async">
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Red Editorial</div>
         </div>
       </div>
 
       <div class="col col--down" id="col-down" data-category="digital">
-        <div class="item" id="digital-1" tabindex="0" data-category="digital">
+        <div class="item" id="digital-1" tabindex="0" data-category="digital" data-title="Personal Project" data-gallery="personal">
           <img src="assets/images/grid-07.png" alt="White dress high fashion editorial" width="768" height="1024" decoding="async">
-          <div class="item__dim" aria-hidden="true"></div>
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Personal Project</div>
         </div>
-        <div class="item item--bordered" id="digital-2" tabindex="0" data-category="digital">
+        <div class="item item--bordered" id="digital-2" tabindex="0" data-category="digital" data-title="Acté Atelier" data-gallery="acte">
           <img src="assets/images/grid-08.svg" alt="ACTE" style="object-fit:contain" width="283" height="231" loading="lazy" decoding="async">
-          <div class="item__dim" aria-hidden="true"></div>
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Acté Atelier</div>
         </div>
-        <div class="item" id="digital-3" tabindex="0" data-category="digital">
+        <div class="item" id="digital-3" tabindex="0" data-category="digital" data-title="Gloves Editorial" data-gallery="gloves">
           <img src="assets/images/grid-09.jpg" alt="Black gloves luxury editorial" width="819" height="1024" loading="lazy" decoding="async">
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Gloves Editorial</div>
         </div>
-        <div class="item" id="digital-4" tabindex="0" data-category="digital">
+        <div class="item" id="digital-4" tabindex="0" data-category="digital" data-title="Mamika Suzuki" data-gallery="mamika">
           <img src="assets/images/grid-10.svg" alt="Luxury black dress studio portrait" width="280" height="280" loading="lazy" decoding="async">
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Mamika Suzuki</div>
         </div>
-        <div class="item" id="digital-5" tabindex="0" data-category="digital">
+        <div class="item" id="digital-5" tabindex="0" data-category="digital" data-title="Dramatic Editorial" data-gallery="dramatic">
           <img src="assets/images/grid-11.png" alt="Dramatic dark fashion portrait" width="1024" height="747" loading="lazy" decoding="async">
+          <div class="item__dim" aria-hidden="true"></div><div class="item__title" aria-hidden="true">Dramatic Editorial</div>
         </div>
       </div>
 
@@ -117,26 +123,17 @@
 
       <div class="gallery__heading">
         <h2 id="gallery-title">BON Magazine</h2>
-        <button class="info-btn" id="info-btn" type="button" aria-expanded="false" aria-controls="gallery-details" aria-label="Toggle credits" hidden>
-          <svg class="icon" aria-hidden="true"><use id="info-icon" href="#i-down"/></svg>
-        </button>
       </div>
-
-      <div class="gallery__details" id="gallery-details" hidden></div>
 
       <div class="gallery__supporting" id="gallery-supporting">
-        <div class="photo photo--wide"><img src="assets/images/bon/supporting-1.jpg" alt="" loading="lazy"></div>
-        <div class="photo photo--wide"><img src="assets/images/bon/supporting-2.jpg" alt="" loading="lazy"></div>
-        <div class="photo photo--tall"><img src="assets/images/bon/supporting-3.jpg" alt="" loading="lazy"></div>
-        <div class="photo photo--tall"><img src="assets/images/bon/supporting-4.jpg" alt="" loading="lazy"></div>
-        <div class="photo photo--wide"><img src="assets/images/bon/supporting-5.jpg" alt="" loading="lazy"></div>
+        <div class="photo photo--wide"><img id="supporting-img-1" src="assets/images/bon/supporting-1.jpg" alt="" loading="lazy"></div>
+        <div class="photo photo--wide"><img id="supporting-img-2" src="assets/images/bon/supporting-2.jpg" alt="" loading="lazy"></div>
+        <div class="photo photo--tall"><img id="supporting-img-3" src="assets/images/bon/supporting-3.jpg" alt="" loading="lazy"></div>
+        <div class="photo photo--tall"><img id="supporting-img-4" src="assets/images/bon/supporting-4.jpg" alt="" loading="lazy"></div>
+        <div class="photo photo--wide"><img id="supporting-img-5" src="assets/images/bon/supporting-5.jpg" alt="" loading="lazy"></div>
       </div>
-
-      <a class="goup goup--panel" href="#" id="panel-goup">
-        <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg>
-        <span>go up</span>
-      </a>
     </section>
+    <div class="panel__fade" aria-hidden="true"></div>
     <button class="next-btn" id="next-btn" type="button">
       <svg class="icon" aria-hidden="true"><use href="#i-right"/></svg>
       <span>Next MAKEUP</span>

@@ -86,7 +86,8 @@ img { display: block; }
   height: 20px;
 }
 .header__inner > * { flex: none; white-space: nowrap; text-transform: lowercase; }
-.header__name { font-size: 20px; line-height: 1; letter-spacing: 1.6px; color: var(--red); }
+.header__name { font-size: 20px; line-height: 1; letter-spacing: 1.6px; color: var(--red); pointer-events: auto; }
+.header__name:hover { opacity: 0.7; }
 .header__roles { display: flex; gap: 37px; }
 .header__roles p,
 .header__about { font-size: 16px; line-height: 1.2; letter-spacing: 1.28px; }
@@ -144,7 +145,10 @@ img { display: block; }
   inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
+  transition: transform 420ms ease;
 }
+.item:hover img,
+.item:focus-visible img { transform: scale(1.06); }
 .item--bordered::after {
   content: "";
   position: absolute; inset: 0;
@@ -291,8 +295,9 @@ img { display: block; }
   position: fixed;
   z-index: 4;
   top: 40px;
-  left: 190px;
-  width: 1060px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1060px, 100vw);
   height: 100vh;
   padding: 80px 20px 24px;
   display: flex;
@@ -305,6 +310,18 @@ img { display: block; }
   animation: fade-in 300ms ease both;
 }
 .panel::-webkit-scrollbar { display: none; }
+
+/* Fades the scrolling gallery image to the page background near the top,
+   so it visually scrolls in under the fixed header instead of butting
+   against it. Sits above the panel's own content but below the header. */
+.panel__fade {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 140px;
+  z-index: 4;
+  background: linear-gradient(to bottom, var(--bg) 0%, var(--bg) 25%, transparent 100%);
+  pointer-events: none;
+}
 
 .gallery__main { width: 480px; aspect-ratio: 3141 / 3614; flex: none; overflow: hidden; }
 .gallery__main img,
@@ -319,24 +336,8 @@ img { display: block; }
 .gallery__heading h2 {
   font-size: 18px; line-height: 1em; font-weight: 400;
   color: var(--ink);
-  cursor: pointer;
   white-space: pre;
 }
-.info-btn { display: flex; padding: 6px; border-radius: 100px; }
-.info-btn[hidden] { display: none; }
-.info-btn .icon { width: 16px; height: 16px; }
-
-.gallery__details {
-  width: 820px; flex: none;
-  padding: 0 28px;
-  display: flex; flex-direction: column; align-items: center; gap: 4px;
-  text-align: center;
-  font-size: 16px; line-height: 1.35em;
-  text-wrap: balance;
-}
-.gallery__details[hidden] { display: none; }
-.gallery__details p { width: 100%; user-select: none; }
-.gallery__details .credit-heading { font-size: 18px; line-height: 1.35; color: var(--hover-red); }
 
 .gallery__supporting {
   width: 780px; flex: none;
@@ -349,17 +350,6 @@ img { display: block; }
 .photo { overflow: hidden; }
 .photo--wide { grid-column: span 2; height: 390px; }
 .photo--tall { height: 490px; }
-
-.goup--panel {
-  width: 64px; height: 100px; flex: none;
-  justify-content: flex-end;
-  padding-bottom: 4px;
-  animation: goup-panel 1.35s ease-in-out infinite;
-}
-@keyframes goup-panel {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-5px); }
-}
 
 /* Floating "next" button (inert in the original, fades in after a little scroll) */
 .next-btn {
@@ -386,16 +376,13 @@ img { display: block; }
 .next-btn__bg { position: absolute; inset: 0; filter: blur(2px); opacity: 0.28; }
 .next-btn__bg img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Narrower than the original's fixed 1060px panel: keep the gallery usable */
-@media (max-width: 1279.98px) {
-  .panel { left: 50%; transform: translateX(-50%); width: min(1060px, 100vw); animation-name: fade-in-centered; }
-  @keyframes fade-in-centered { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 809.98px) {
+  .panel__fade { height: 180px; }
 }
 @media (max-width: 859.98px) {
   .panel { padding: 80px 16px 24px; }
-  .gallery__heading, .gallery__supporting, .gallery__details { width: 100%; }
+  .gallery__heading, .gallery__supporting { width: 100%; }
   .gallery__main { width: min(480px, 100%); }
-  .gallery__details { padding: 0 12px; }
   .gallery__supporting { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .photo--wide { height: auto; aspect-ratio: 2 / 1; }
   .photo--tall { height: auto; aspect-ratio: 382 / 490; }

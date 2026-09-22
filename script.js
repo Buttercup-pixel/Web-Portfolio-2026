@@ -85,32 +85,34 @@
   }
 
   /* ---------- Gallery overlay ----------
-     Only items with real, verified gallery content (data-gallery) open the
-     overlay — matching the live site, where the other grid images are not
-     wired to any project gallery yet. */
+     Every grid item opens the overlay. Only "bon" has its own verified
+     photos (the real project behind makeup-1); every other item is a
+     placeholder gallery that reuses those same supporting photos until
+     real project photos are provided, per its own main thumbnail. */
   const overlay = $('#overlay');
   const panel = $('#panel');
-  const infoBtn = $('#info-btn');
-  const infoIcon = $('#info-icon');
-  const details = $('#gallery-details');
   const title = $('#gallery-title');
   const nextBtn = $('#next-btn');
   const mainImg = $('#gallery-main-img');
+  const supportingImgs = $$('#gallery-supporting img');
   let lastFocus = null;
 
+  const bonSupporting = [1, 2, 3, 4, 5].map((n) => `assets/images/bon/supporting-${n}.jpg`);
+
   const galleries = {
-    bon: {
-      title: 'BON Magazine',
-      mainSrc: 'assets/images/bon/main.jpg',
-      mainAlt: 'BON Magazine editorial',
-    },
+    bon: { title: 'BON Magazine', mainSrc: 'assets/images/bon/main.jpg', supporting: bonSupporting },
+    wrpd: { title: 'WRPD Magazine', mainSrc: 'assets/images/grid-02.jpg', supporting: bonSupporting },
+    vogue: { title: 'Vogue CS', mainSrc: 'assets/images/grid-03.jpg', supporting: bonSupporting },
+    metalhead: { title: 'Metalhead Magazine', mainSrc: 'assets/images/grid-04.webp', supporting: bonSupporting },
+    studio: { title: 'Studio Editorial', mainSrc: 'assets/images/grid-05.jpg', supporting: bonSupporting },
+    reddress: { title: 'Red Editorial', mainSrc: 'assets/images/grid-06.jpg', supporting: bonSupporting },
+    personal: { title: 'Personal Project', mainSrc: 'assets/images/grid-07.png', supporting: bonSupporting },
+    acte: { title: 'Acté Atelier', mainSrc: 'assets/images/grid-08.svg', supporting: bonSupporting },
+    gloves: { title: 'Gloves Editorial', mainSrc: 'assets/images/grid-09.jpg', supporting: bonSupporting },
+    mamika: { title: 'Mamika Suzuki', mainSrc: 'assets/images/grid-10.svg', supporting: bonSupporting },
+    dramatic: { title: 'Dramatic Editorial', mainSrc: 'assets/images/grid-11.png', supporting: bonSupporting },
   };
 
-  function setInfo(open) {
-    details.hidden = !open;
-    infoBtn.setAttribute('aria-expanded', String(open));
-    infoIcon.setAttribute('href', open ? '#i-chevron-up' : '#i-down');
-  }
   function syncNext() {
     nextBtn.classList.toggle('is-visible', panel.scrollTop > 24);
   }
@@ -118,13 +120,13 @@
   function openGallery(trigger) {
     const key = trigger && trigger.dataset && trigger.dataset.gallery;
     const data = key && galleries[key];
-    if (!data) return; // no verified content for this item yet
+    if (!data) return;
     title.textContent = data.title;
     mainImg.src = data.mainSrc;
-    mainImg.alt = data.mainAlt;
+    mainImg.alt = data.title;
+    supportingImgs.forEach((img, i) => { img.src = data.supporting[i]; });
     lastFocus = trigger || document.activeElement;
     closeAbout(true);
-    setInfo(false);
     overlay.hidden = false;
     panel.scrollTop = 0;
     syncNext();
@@ -150,12 +152,10 @@
 
   $('#overlay-backdrop').addEventListener('click', closeGallery);
 
-  infoBtn.addEventListener('click', () => setInfo(details.hidden));
-  title.addEventListener('click', () => setInfo(details.hidden));
-
-  $('#panel-goup').addEventListener('click', (e) => {
-    e.preventDefault();
-    panel.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+  // Click anywhere inside the panel that isn't a photo closes it too.
+  panel.addEventListener('click', (e) => {
+    if (e.target.tagName === 'IMG') return;
+    closeGallery();
   });
 
   /* ---------- About overlay ---------- */
@@ -190,7 +190,7 @@
   const ctx = canvas.getContext('2d');
   const BOARD_H = 420;
   const STROKE = 'rgb(255, 45, 45)';
-  const history = [];
+  const strokeHistory = [];
   const saved = [];
   let drawing = false;
 
@@ -215,7 +215,7 @@
   }
   canvas.addEventListener('pointerdown', (e) => {
     const { x, y } = pos(e);
-    history.push(canvas.toDataURL('image/png'));
+    strokeHistory.push(canvas.toDataURL('image/png'));
     canvas.setPointerCapture(e.pointerId);
     drawing = true;
     ctx.beginPath();
@@ -239,8 +239,8 @@
     ctx.clearRect(0, 0, r.width, BOARD_H);
   }
   function undo() {
-    if (!history.length) return false;
-    const snap = history.pop();
+    if (!strokeHistory.length) return false;
+    const snap = strokeHistory.pop();
     const r = canvas.getBoundingClientRect();
     const img = new Image();
     img.onload = () => { ctx.clearRect(0, 0, r.width, BOARD_H); ctx.drawImage(img, 0, 0, r.width, BOARD_H); };
@@ -268,6 +268,14 @@
   $('#page-goup').addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
-    history.replaceState(null, '', location.pathname + location.search);
+    window.history.replaceState(null, '', location.pathname + location.search);
+  });
+
+  /* ---------- Brand name: back to home ---------- */
+  $('#brand-btn').addEventListener('click', () => {
+    closeGallery();
+    closeAbout(true);
+    window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+    window.history.replaceState(null, '', location.pathname + location.search);
   });
 })();
