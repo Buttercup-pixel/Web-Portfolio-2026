@@ -325,19 +325,20 @@ img { display: block; }
   cursor: pointer;
 }
 .info-btn { display: flex; padding: 6px; border-radius: 100px; }
-.info-btn .icon { width: 16px; height: 16px; transition: transform 380ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+.info-btn .icon { width: 16px; height: 16px; transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1); }
 .info-btn.is-open .icon { transform: rotate(180deg); }
 
-/* Accordion: animates open/closed via max-height, with the inner content
-   cross-fading in slightly after. Eased with a snappy, spring-like curve
-   (fast start, soft settle) rather than a linear/plain ease. */
+/* Accordion: animates open/closed via max-height (set inline by JS to the
+   content's real measured height — animating to a fixed value much taller
+   than the content makes an eased reveal finish almost instantly, since
+   the visible range is covered in a small fraction of the duration).
+   Eased with a gentle, spring-like curve — deliberately unhurried. */
 .gallery__details {
   width: 820px; flex: none;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: max-height 600ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-.gallery__details.is-open { max-height: 400px; }
 .gallery__details-inner {
   padding: 0 28px;
   display: flex; flex-direction: column; align-items: center; gap: 4px;
@@ -345,11 +346,11 @@ img { display: block; }
   font-size: 16px; line-height: 1.35em;
   text-wrap: balance;
   opacity: 0;
-  transition: opacity 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 320ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .gallery__details.is-open .gallery__details-inner {
   opacity: 1;
-  transition: opacity 260ms cubic-bezier(0.16, 1, 0.3, 1) 90ms;
+  transition: opacity 380ms cubic-bezier(0.22, 1, 0.36, 1) 180ms;
 }
 .gallery__details-inner p { width: 100%; user-select: none; }
 .gallery__details-inner .credit-heading { font-size: 18px; line-height: 1.35; color: var(--hover-red); }

@@ -94,6 +94,7 @@
   const title = $('#gallery-title');
   const infoBtn = $('#info-btn');
   const details = $('#gallery-details');
+  const detailsInner = details.querySelector('.gallery__details-inner');
   const nextBtn = $('#next-btn');
   const mainImg = $('#gallery-main-img');
   const supportingImgs = $$('#gallery-supporting img');
@@ -119,6 +120,11 @@
     nextBtn.classList.toggle('is-visible', panel.scrollTop > 24);
   }
   function setInfo(open) {
+    // Animate to the content's real height rather than a fixed guess —
+    // with an eased curve, a target much taller than the content makes
+    // the reveal finish almost instantly instead of over the full
+    // transition.
+    details.style.maxHeight = open ? `${detailsInner.scrollHeight}px` : '0px';
     details.classList.toggle('is-open', open);
     infoBtn.classList.toggle('is-open', open);
     infoBtn.setAttribute('aria-expanded', String(open));
