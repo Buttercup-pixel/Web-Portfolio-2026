@@ -325,16 +325,17 @@ img { display: block; }
   cursor: pointer;
 }
 .info-btn { display: flex; padding: 6px; border-radius: 100px; }
-.info-btn .icon { width: 16px; height: 16px; transition: transform 280ms ease; }
+.info-btn .icon { width: 16px; height: 16px; transition: transform 380ms cubic-bezier(0.34, 1.56, 0.64, 1); }
 .info-btn.is-open .icon { transform: rotate(180deg); }
 
 /* Accordion: animates open/closed via max-height, with the inner content
-   cross-fading in slightly after. */
+   cross-fading in slightly after. Eased with a snappy, spring-like curve
+   (fast start, soft settle) rather than a linear/plain ease. */
 .gallery__details {
   width: 820px; flex: none;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 320ms ease;
+  transition: max-height 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .gallery__details.is-open { max-height: 400px; }
 .gallery__details-inner {
@@ -344,11 +345,11 @@ img { display: block; }
   font-size: 16px; line-height: 1.35em;
   text-wrap: balance;
   opacity: 0;
-  transition: opacity 200ms ease;
+  transition: opacity 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .gallery__details.is-open .gallery__details-inner {
   opacity: 1;
-  transition: opacity 220ms ease 100ms;
+  transition: opacity 260ms cubic-bezier(0.16, 1, 0.3, 1) 90ms;
 }
 .gallery__details-inner p { width: 100%; user-select: none; }
 .gallery__details-inner .credit-heading { font-size: 18px; line-height: 1.35; color: var(--hover-red); }
