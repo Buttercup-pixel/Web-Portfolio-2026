@@ -37,13 +37,14 @@
 @media (min-width: 1440px) {
   :root { --col-gap: 40px; --row-gap: 40px; }
 }
-/* ≤809: compact grid — full-bleed, fluid columns with a visible gap
-   between them (was edge-to-edge with 0 gap and a fixed, smaller size). */
+/* ≤809: compact grid — fluid columns with a visible gap between them and
+   a small margin from the viewport edges (was full-bleed with 0 edge
+   margin, which crowded the images against the sides). */
 @media (max-width: 809.98px) {
   :root {
-    --content: 100vw;
+    --content: calc(100vw - 24px);
     --col-gap: 16px;
-    --img: calc((100vw - 16px) / 2);
+    --img: calc((100vw - 24px - 16px) / 2);
     --row-gap: 16px;
   }
 }
@@ -120,7 +121,7 @@ img { display: block; }
   overflow-x: clip;
 }
 @media (max-width: 809.98px) {
-  .page { padding-top: 168px; padding-bottom: 60px; }
+  .page { padding-top: 168px; padding-bottom: 30px; }
 }
 .cols {
   width: var(--content);
@@ -220,6 +221,26 @@ img { display: block; }
 @keyframes goup-page {
   0%, 100% { transform: translateY(-100px); }
   50%      { transform: translateY(-94px); }
+}
+
+@media (max-width: 809.98px) {
+  /* The desktop bounce range (94-100px above its baseline) was tuned for
+     the old, much taller bottom padding — on the compact mobile padding
+     it landed on top of the images instead of below them. */
+  .goup--page {
+    bottom: 4px;
+    width: 56px;
+    height: 30px;
+    margin-left: -28px;
+    gap: 4px;
+    animation-name: goup-page-mobile;
+  }
+  .goup--page .icon { width: 14px; height: 14px; }
+  .goup--page span { font-size: 10px; }
+}
+@keyframes goup-page-mobile {
+  0%, 100% { transform: translateY(-8px); }
+  50%      { transform: translateY(-4px); }
 }
 
 /* ---------- Cursor labels ---------- */
@@ -363,7 +384,7 @@ img { display: block; }
 }
 .gallery__details.is-open .gallery__details-inner {
   opacity: 1;
-  transition: opacity 760ms cubic-bezier(0.22, 1, 0.36, 1) 360ms;
+  transition: opacity 760ms cubic-bezier(0.22, 1, 0.36, 1) 240ms;
 }
 .gallery__details-inner p { width: 100%; user-select: none; }
 .gallery__details-inner .credit-heading { font-size: 18px; line-height: 1.35; color: var(--hover-red); }
