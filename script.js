@@ -198,6 +198,13 @@
   }
   aboutBtn.addEventListener('click', () => (about.hidden ? openAbout() : closeAbout()));
 
+  // Tap anywhere in the about panel closes it, except on links or the
+  // drawing board (so people can actually use those).
+  aboutPanel.addEventListener('click', (e) => {
+    if (e.target.closest('a, #trace')) return;
+    closeAbout();
+  });
+
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') { closeGallery(); closeAbout(); }
   });
