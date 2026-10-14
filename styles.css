@@ -426,7 +426,8 @@ img { display: block; }
 .about > * { width: min(780px, 100%); flex: none; }
 
 .about__portrait { height: 480px; overflow: hidden; }
-.about__portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 49.6% 16.9%; }
+.about__portrait picture { display: block; width: 100%; height: 100%; }
+.about__portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 54%; }
 
 .about__copy { display: flex; flex-direction: column; gap: 12px; }
 .about__copy h1 {
