@@ -444,6 +444,7 @@ img { display: block; }
   color: var(--hover-red);
   font-family: var(--font-mono);
 }
+.trace[hidden] { display: none; }
 .trace p { text-transform: lowercase; color: var(--hover-red); }
 .trace__head { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; }
 .trace__title { font-size: 15px; letter-spacing: 0.02em; line-height: normal; }
