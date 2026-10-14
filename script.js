@@ -107,6 +107,7 @@
     if (cat === stripCat) return;
     stripCat = cat;
     order = all.filter((g) => g.category === cat);
+    $('#strip-title').textContent = `other in ${cat}`;
     stripTrack.replaceChildren();
     for (let c = 0; c < COPIES; c++) {
       order.forEach((g) => {
@@ -149,8 +150,10 @@
   stripTrack.addEventListener('scroll', loopStrip, { passive: true });
   // At the bottom of a project, scrolling further slides the filmstrip sideways.
   panel.addEventListener('wheel', (e) => {
-    if (!current || e.deltaY <= 0) return;
-    if (panel.scrollTop + panel.clientHeight < panel.scrollHeight - 2) return;
+    if (!current || !e.deltaY) return;
+    const overStrip = e.target.closest && e.target.closest('#strip');
+    const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 2;
+    if (!overStrip && !(atBottom && e.deltaY > 0)) return;
     e.preventDefault();
     stripTrack.scrollLeft += e.deltaY;
   }, { passive: false });
