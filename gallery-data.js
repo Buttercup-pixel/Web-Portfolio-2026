@@ -76,10 +76,13 @@ window.GALLERIES = {
    {
     "h": "credits",
     "lines": [
-     "Photographer — placeholder name",
-     "Styling — placeholder name",
-     "Makeup — Johanna Nordlander",
-     "Hair — placeholder name"
+     "Photographer — Ellen Nykvist Mink Mgmt",
+     "Stylist — Sandra Ekenstam",
+     "Makeup artist — Johanna Nordlander Link Details",
+     "Hairstylist — Tony Lundström Mikas Looks",
+     "Model — Anna Thunström",
+     "Stylist assistant — Rebecka",
+     "Photo assistant — Katarina Karsiwoman"
     ]
    }
   ]
@@ -185,10 +188,21 @@ window.GALLERIES = {
    {
     "h": "credits",
     "lines": [
-     "Photographer — placeholder name",
-     "Styling — placeholder name",
-     "Makeup — Johanna Nordlander",
-     "Hair — placeholder name"
+     "Photographer — Mattias Björklund Bremer Lund Lund",
+     "Stylist — Maria Barsoum",
+     "Makeup artist — Johanna Nordlander Link Details",
+     "Hairstylist — Karolina Liedberg Link Details",
+     "Casting — Maria Barsoum",
+     "Photographer assistant — Björn Weidinger",
+     "Stylist assistant — Emelie Preber",
+     "Stylist assistant — Victoria Andersson",
+     "Makeup assistant — Valentina Di Luca",
+     "Hair assistant — Isabell Larrson",
+     "Model — Seidato Sey",
+     "Model — Ikra The Wonders",
+     "Model — Alexandra W, Emma L Stockholmsgruppen",
+     "Model — Ted, Sabina Nisch Management",
+     "Model — Gantuya, Liz A, Eva S, Anna H Mikas"
     ]
    }
   ]
@@ -282,10 +296,20 @@ window.GALLERIES = {
    {
     "h": "credits",
     "lines": [
-     "Photographer — placeholder name",
-     "Styling — placeholder name",
-     "Makeup — Johanna Nordlander",
-     "Hair — placeholder name"
+     "Photographer — Ceen Wahren Agent Bauer",
+     "Stylist — Pamela Norah",
+     "Makeup artist — Johanna Nordlander Link Details",
+     "Hairstylist — Philip Fohlin",
+     "Set Design — Aron Heinemann",
+     "Model — Lara The Wonders",
+     "Model — Sara Uki The Wonders",
+     "Photography assistant — Dan Kendall",
+     "Stylist assistant — Joanna Skoog",
+     "Makeup assistant — Danella Ericson",
+     "Set Design assistant — Fann Xu Heinemann",
+     "Set Design assistant — Kristoffer Knudsen",
+     "Retoucher — Denise Gereben",
+     "Production — XO Dot Studio Linn Kristina Persson"
     ]
    }
   ]
@@ -397,10 +421,13 @@ window.GALLERIES = {
    {
     "h": "credits",
     "lines": [
-     "Photographer — placeholder name",
-     "Styling — placeholder name",
-     "Makeup — Johanna Nordlander",
-     "Hair — placeholder name"
+     "Photographer — Ellen Nykvist",
+     "Stylist — Mi Märak",
+     "Makeup artist — Johanna Nordlander Link Details",
+     "Hairstylist — Jesper Hallin",
+     "Nail artist — Johanna Nordlander",
+     "Model — Belle Nisch Management",
+     "Makeup assistant — Valentina Di Luca"
     ]
    }
   ]
@@ -494,10 +521,14 @@ window.GALLERIES = {
    {
     "h": "credits",
     "lines": [
-     "Photographer — placeholder name",
-     "Styling — placeholder name",
-     "Makeup — Johanna Nordlander",
-     "Hair — placeholder name"
+     "Photographer — Matilda Hallander",
+     "Stylist — Sandra Ekenstam",
+     "Makeup artist — Johanna Nordlander Link Details",
+     "Hairstylist — Caroline Ljusterdal",
+     "Nail artist — Johanna Nordlander",
+     "Model — Marion Mikas",
+     "Makeup assistant — Isabella Johansson",
+     "Hair assistant — Wanda Persson"
     ]
    }
   ]
@@ -558,10 +589,15 @@ window.GALLERIES = {
    {
     "h": "credits",
     "lines": [
-     "Photographer — placeholder name",
-     "Styling — placeholder name",
-     "Makeup — Johanna Nordlander",
-     "Hair — placeholder name"
+     "Talent — Tove Lo",
+     "Photographer — Szymon Stepniak",
+     "Stylist — Klaas Hammer",
+     "Makeup artist — Johanna Nordlander Link Details",
+     "Hairstylist — Leo Stern",
+     "Light assistant — Alex Forrest",
+     "Camera assistant — Francisco Ramos",
+     "Stylist assistant — Louisa Edgn",
+     "BTS — Sergey Kuchin"
     ]
    }
   ]
@@ -613,10 +649,17 @@ window.GALLERIES = {
    {
     "h": "credits",
     "lines": [
-     "Photographer — placeholder name",
-     "Styling — placeholder name",
-     "Makeup — Johanna Nordlander",
-     "Hair — placeholder name"
+     "Photographer — Hana Knizova",
+     "Editor in Chief — Danica Kovarova",
+     "Stylist — Milena Zuravljova",
+     "Publisher — Michael Seewald",
+     "Art Director — Robert Kovac",
+     "Makeup artist — Johanna Nordlander Link Details",
+     "Hairstylist — Mailn Wallin",
+     "Model — Maggie Maurer IMG Models",
+     "Casting — Krokog Heya",
+     "Photographer assistant — Kaspar Daniel",
+     "Styling assistant — Debora Kellovska"
     ]
    }
   ]
@@ -674,10 +717,11 @@ window.GALLERIES = {
    {
     "h": "credits",
     "lines": [
-     "Photographer — placeholder name",
-     "Styling — placeholder name",
-     "Makeup — Johanna Nordlander",
-     "Hair — placeholder name"
+     "Photographer — Ida Blom",
+     "Stylist — Emma Thorstrand",
+     "Makeup artist — Johanna Nordlander Link Details",
+     "Hairstylist — Angelica Beckman Mikas Looks",
+     "Model — Sofia Hansson Nisch Management"
     ]
    }
   ]

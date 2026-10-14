@@ -15,20 +15,23 @@ SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.expanduser(
     '~/Library/Mobile Documents/com~apple~CloudDocs/Portfolio_2026')
 OUT = os.path.join(REPO, 'assets', 'images')
 
-PLACEHOLDER = [{'h': 'credits', 'lines': [
-    'Photographer — placeholder name', 'Styling — placeholder name',
-    'Makeup — Johanna Nordlander', 'Hair — placeholder name']}]
+CREDITS = json.load(open(os.path.join(REPO, 'tools', 'makeup-credits.json')))
+
+
+def credits(key):
+    return [{'h': 'credits', 'lines': CREDITS[key]}]
+
 
 # (key, category, folder(s), hover title, panel title, details)
 CASES = [
-    ('domina', 'makeup', ['Makeup/Domina/Webp'], 'Domina Journal', 'Domina Journal', PLACEHOLDER),
-    ('elle2023', 'makeup', ['Makeup/ELLE 2023/Webp'], 'Elle Sverige 2023', 'Elle Sverige 2023', PLACEHOLDER),
-    ('elleceen', 'makeup', ['Makeup/ELLE_CEEN/Webp'], 'Elle Sverige — Ceen', 'Elle Sverige — Ceen', PLACEHOLDER),
-    ('metalhead', 'makeup', ['Makeup/Metalhead/Webp'], 'Metalhead Magazine', 'Metalhead Magazine', PLACEHOLDER),
-    ('mhmarion', 'makeup', ['Makeup/MH Marion/Webp'], 'Personal Project', 'MH Marion — Personal Project', PLACEHOLDER),
-    ('tovelo', 'makeup', ['Makeup/Tove Lo Milles/Webp'], 'Tove Lo — Le Mile', 'Tove Lo — Le Mile', PLACEHOLDER),
-    ('voguecs', 'makeup', ['Makeup/VOGUE_CS/Webp'], 'Vogue Czechoslovakia', 'Vogue Czechoslovakia', PLACEHOLDER),
-    ('wrpd', 'makeup', ['Makeup/WRPD/Webp'], 'WRPD Magazine', 'WRPD Magazine', PLACEHOLDER),
+    ('domina', 'makeup', ['Makeup/Domina/Webp'], 'Domina Journal', 'Domina Journal', credits('domina')),
+    ('elle2023', 'makeup', ['Makeup/ELLE 2023/Webp'], 'Elle Sverige 2023', 'Elle Sverige 2023', credits('elle2023')),
+    ('elleceen', 'makeup', ['Makeup/ELLE_CEEN/Webp'], 'Elle Sverige — Ceen', 'Elle Sverige — Ceen', credits('elleceen')),
+    ('metalhead', 'makeup', ['Makeup/Metalhead/Webp'], 'Metalhead Magazine', 'Metalhead Magazine', credits('metalhead')),
+    ('mhmarion', 'makeup', ['Makeup/MH Marion/Webp'], 'Personal Project', 'MH Marion — Personal Project', credits('mhmarion')),
+    ('tovelo', 'makeup', ['Makeup/Tove Lo Milles/Webp'], 'Tove Lo — Le Mile', 'Tove Lo — Le Mile', credits('tovelo')),
+    ('voguecs', 'makeup', ['Makeup/VOGUE_CS/Webp'], 'Vogue Czechoslovakia', 'Vogue Czechoslovakia', credits('voguecs')),
+    ('wrpd', 'makeup', ['Makeup/WRPD/Webp'], 'WRPD Magazine', 'WRPD Magazine', credits('wrpd')),
 
     ('alien', 'digital',
      ['Digital/Alien/3D Nail Alien/webp', 'Digital/Alien/3D Nail Human/Webp', 'Digital/Alien/Mag Covers/Webp'],
