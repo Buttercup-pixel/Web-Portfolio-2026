@@ -105,7 +105,8 @@ img { display: block; }
 .header__email { transition: color 0.2s; }
 .header__email:hover, .header__email:focus-visible { color: var(--red); }
 
-@media (max-width: 809.98px) {
+/* Header stacks on phones and small tablets, where one row gets crowded. */
+@media (max-width: 899.98px) {
   .header { top: 16px; }
   .header__inner {
     flex-direction: column;
@@ -123,8 +124,11 @@ img { display: block; }
   padding: 92px 0 60px;
   overflow-x: clip;
 }
+@media (max-width: 899.98px) {
+  .page { padding-top: 168px; }
+}
 @media (max-width: 809.98px) {
-  .page { padding-top: 168px; padding-bottom: 30px; }
+  .page { padding-bottom: 30px; }
 }
 .cols {
   width: var(--content);
@@ -398,9 +402,12 @@ img { display: block; }
   .gallery__details-inner { padding: 0 12px 32px; }
   .gallery__supporting { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-@media (max-width: 809.98px) {
-  .panel { padding-top: 140px; padding-bottom: 120px; }
+@media (max-width: 899.98px) {
+  .panel { padding-top: 140px; }
   #about-panel { padding-top: 140px; }
+}
+@media (max-width: 809.98px) {
+  .panel { padding-bottom: 120px; }
   .hint { font-size: 21px; gap: 8px; }
   .hint svg { width: 28px; height: 28px; }
   .panel .back-btn, #about-back { display: flex; }
