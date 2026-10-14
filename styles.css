@@ -403,7 +403,9 @@ img { display: block; }
   #about-panel { padding-top: 140px; }
   .hint { font-size: 21px; gap: 8px; }
   .hint svg { width: 28px; height: 28px; }
-  .panel .back-btn { display: flex; }
+  .panel .back-btn, #about-back { display: flex; }
+  .panel .back-btn { align-self: flex-start; margin-left: -6px; }
+  #about-back { margin-left: -6px; width: auto; align-self: flex-start; }
 }
 
 /* Back to the front page (mobile only) */

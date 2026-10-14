@@ -353,7 +353,8 @@
   });
 
   $('#overlay-backdrop').addEventListener('click', closeGallery);
-  $$('.back-btn').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); closeGallery(); }));
+  $$('#panel .back-btn').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); closeGallery(); }));
+  $('#about-back').addEventListener('click', (e) => { e.stopPropagation(); closeAbout(); });
 
   infoBtn.addEventListener('click', (e) => { e.stopPropagation(); setInfo(!details.classList.contains('is-open')); });
   title.addEventListener('click', (e) => { e.stopPropagation(); setInfo(!details.classList.contains('is-open')); });
