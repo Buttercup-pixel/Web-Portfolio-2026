@@ -254,20 +254,7 @@
       list.push(...deferred);
     }
     const items = list.map((it) => ({ it, k: kind(it) }));
-    for (let i = 0; i < items.length; i++) {
-      const { it, k } = items[i];
-      let cls = k;
-      if (k === 'half') {
-        let run = 0;
-        for (let j = i; j < items.length && items[j].k === 'half'; j++) run++;
-        const pos = (() => { let n = 0; for (let j = i - 1; j >= 0 && items[j].k === 'half'; j--) n++; return n; })();
-        if (pos === run - 1 && run % 2 === 1 && pos % 2 === 0) cls = 'solo';
-      }
-      const box = el('div', `photo photo--${cls}`);
-      if (cls === 'wide' || cls === 'solo') {
-        box.style.aspectRatio = `${it.w} / ${it.h}`;
-        box.style.setProperty('--w', `${Math.round(cls === 'wide' ? 780 : Math.min(382, 490 * (it.w / it.h)))}px`);
-      }
+    const fill = (box, it) => {
       if (it.video) {
         const v = document.createElement('video');
         v.src = it.video;
@@ -278,6 +265,35 @@
       } else {
         box.append(makeImg(it, '', true));
       }
+    };
+    for (let i = 0; i < items.length; i++) {
+      const { it, k } = items[i];
+      let cls = k;
+      if (k === 'half') {
+        let run = 0;
+        for (let j = i; j < items.length && items[j].k === 'half'; j++) run++;
+        const pos = (() => { let n = 0; for (let j = i - 1; j >= 0 && items[j].k === 'half'; j--) n++; return n; })();
+        if (pos === run - 1 && run % 2 === 1 && pos % 2 === 0) cls = 'solo';
+      }
+      if (cls === 'half') {
+        // A pair shares one row height: each photo is as wide as its own
+        // proportions need, so nothing is cropped or stretched.
+        const row = el('div', 'photo-row');
+        [it, items[i + 1].it].forEach((p) => {
+          const box = el('div', 'photo photo--half');
+          box.style.aspectRatio = `${p.w} / ${p.h}`;
+          box.style.flex = `${p.w / p.h} 1 0`;
+          fill(box, p);
+          row.append(box);
+        });
+        supporting.append(row);
+        i++;
+        continue;
+      }
+      const box = el('div', `photo photo--${cls}`);
+      box.style.aspectRatio = `${it.w} / ${it.h}`;
+      box.style.setProperty('--w', `${Math.round(cls === 'wide' ? 780 : Math.min(382, 490 * (it.w / it.h)))}px`);
+      fill(box, it);
       supporting.append(box);
     }
   }

@@ -402,7 +402,8 @@ img { display: block; }
 }
 .photo { overflow: hidden; }
 .photo--wide, .photo--solo { grid-column: span 2; width: min(var(--w, 100%), 100%); justify-self: center; }
-.photo--half { aspect-ratio: 382 / 490; }
+.photo-row { grid-column: span 2; display: flex; gap: 16px; align-items: flex-start; }
+.photo--half { min-width: 0; }
 
 /* Filmstrip: sits at the end of each project and scrolls with it */
 .strip {
