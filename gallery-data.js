@@ -1156,13 +1156,13 @@ window.GALLERIES = {
   "hover": "Mamika Suzuki — Photography",
   "title": "Mamika Suzuki E-commerce Photography — Client project",
   "thumb": {
-   "src": "assets/images/mamikashoot/01.webp?v=4bd8cbf6",
+   "src": "assets/images/mamikashoot/01.webp?v=86fa6181",
    "w": 1920,
    "h": 2400,
    "fb": "assets/images/mamikashoot/fb/01.jpg?v=bfa47f1b"
   },
   "main": {
-   "src": "assets/images/mamikashoot/01.webp?v=4bd8cbf6",
+   "src": "assets/images/mamikashoot/01.webp?v=86fa6181",
    "w": 1920,
    "h": 2400,
    "fb": "assets/images/mamikashoot/fb/01.jpg?v=bfa47f1b"
@@ -1175,7 +1175,7 @@ window.GALLERIES = {
     "fb": "assets/images/mamikashoot/fb/02.jpg?v=e660991f"
    },
    {
-    "src": "assets/images/mamikashoot/03.webp?v=86fa6181",
+    "src": "assets/images/mamikashoot/03.webp?v=4bd8cbf6",
     "w": 1920,
     "h": 2400,
     "fb": "assets/images/mamikashoot/fb/03.jpg?v=18a29a01"
