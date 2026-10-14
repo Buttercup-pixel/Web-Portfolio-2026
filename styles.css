@@ -95,7 +95,7 @@ img { display: block; }
 }
 .header__inner > * { flex: none; white-space: nowrap; text-transform: lowercase; }
 .header__name { font-size: 20px; line-height: 1; letter-spacing: 1.6px; color: var(--red); pointer-events: auto; }
-.header__name:hover { opacity: 0.7; }
+.header__name:hover, .header__about:hover { opacity: 0.7; }
 .header__roles { display: flex; gap: 37px; }
 .header__roles p,
 .header__about { font-size: 16px; line-height: 1.2; letter-spacing: 1.28px; }
