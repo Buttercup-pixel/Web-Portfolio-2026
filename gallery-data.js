@@ -837,26 +837,26 @@ window.GALLERIES = {
   "hover": "Haglöfs — AI exploration",
   "title": "Haglöfs AI Visual Exploration — Hyper Island client project",
   "thumb": {
-   "src": "assets/images/haglofs/01.webp?v=c8438a59",
-   "w": 750,
-   "h": 810
+   "src": "assets/images/haglofs/01.webp?v=812a2d26",
+   "w": 720,
+   "h": 434
   },
   "main": {
-   "src": "assets/images/haglofs/01.webp?v=c8438a59",
-   "w": 750,
-   "h": 810
+   "src": "assets/images/haglofs/01.webp?v=812a2d26",
+   "w": 720,
+   "h": 434
   },
   "items": [
    {
-    "src": "assets/images/haglofs/02.webp?v=783609ef",
-    "w": 768,
-    "h": 1024,
+    "src": "assets/images/haglofs/02.webp?v=c8438a59",
+    "w": 750,
+    "h": 810,
     "fb": "assets/images/haglofs/fb/02.jpg?v=d3cab0f8"
    },
    {
-    "src": "assets/images/haglofs/03.webp?v=610116a0",
-    "w": 1792,
-    "h": 2048,
+    "src": "assets/images/haglofs/03.webp?v=783609ef",
+    "w": 768,
+    "h": 1024,
     "fb": "assets/images/haglofs/fb/03.jpg?v=c593aab4"
    },
    {
@@ -865,9 +865,9 @@ window.GALLERIES = {
     "h": 1920
    },
    {
-    "src": "assets/images/haglofs/05.webp?v=11f6dd3e",
-    "w": 768,
-    "h": 1024,
+    "src": "assets/images/haglofs/05.webp?v=610116a0",
+    "w": 1792,
+    "h": 2048,
     "fb": "assets/images/haglofs/fb/05.jpg?v=71b23e47"
    },
    {
@@ -875,6 +875,11 @@ window.GALLERIES = {
     "w": 960,
     "h": 1056,
     "fb": "assets/images/haglofs/fb/06.jpg?v=1c322864"
+   },
+   {
+    "src": "assets/images/haglofs/07.webp?v=11f6dd3e",
+    "w": 768,
+    "h": 1024
    }
   ],
   "details": [
