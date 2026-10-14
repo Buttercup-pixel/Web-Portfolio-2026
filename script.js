@@ -102,11 +102,9 @@
   const all = Object.values(galleries);
   let order = [];
   let stripCat = null;
-  let freshStrip = true;
   function buildStrip(cat) {
     if (cat === stripCat) return;
     stripCat = cat;
-    freshStrip = true;
     order = all.filter((g) => g.category === cat);
     stripTrack.replaceChildren();
     order.forEach((g) => {
@@ -131,12 +129,8 @@
     $$('.strip__thumb', stripTrack).forEach((t) => {
       const on = t.dataset.key === current.key;
       t.classList.toggle('is-current', on);
-      if (on) {
-        const left = t.offsetLeft - (stripTrack.clientWidth - t.offsetWidth) / 2;
-        stripTrack.scrollTo({ left, behavior: freshStrip || reduced ? 'auto' : 'smooth' });
-      }
+      if (on) stripTrack.scrollLeft = t.offsetLeft - (stripTrack.clientWidth - t.offsetWidth) / 2;
     });
-    freshStrip = false;
   }
   function setInfo(open) {
     // Animate to the content's real height rather than a fixed guess —
