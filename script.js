@@ -101,12 +101,11 @@
 
   const all = Object.values(galleries);
   let order = [];
-  let stripCat = null;
+  let catOrder = [];
   const COPIES = 5;
-  function buildStrip(cat) {
-    if (cat === stripCat) return;
-    stripCat = cat;
-    order = all.filter((g) => g.category === cat);
+  function buildStrip(cat, key) {
+    catOrder = all.filter((g) => g.category === cat);
+    order = catOrder.filter((g) => g.key !== key);
     $('#strip-title').textContent = `other in ${cat}`;
     stripTrack.replaceChildren();
     for (let c = 0; c < COPIES; c++) {
@@ -132,7 +131,7 @@
     const gap = 10;
     const vw = stripTrack.clientWidth - 16;
     const n = order.length;
-    const size = Math.min(130, Math.max(56, Math.ceil((vw - 12 - n * gap) / (n - 1)) + 2));
+    const size = Math.min(170, Math.max(56, Math.ceil((vw - 12 - n * gap) / (n - 1)) + 2));
     stripTrack.style.setProperty('--thumb', `${size}px`);
     stripTrack.scrollLeft = setWidth() * 2;
   }
@@ -160,13 +159,8 @@
   function go(key) { openGallery($(`.item[data-gallery="${key}"]`)); }
   function step(dir) {
     if (!current) return;
-    const i = order.findIndex((g) => g.key === current.key);
-    go(order[(i + dir + order.length) % order.length].key);
-  }
-  function syncStrip() {
-    $$('.strip__thumb', stripTrack).forEach((t) => {
-      t.classList.toggle('is-current', t.dataset.key === current.key);
-    });
+    const i = catOrder.findIndex((g) => g.key === current.key);
+    go(catOrder[(i + dir + catOrder.length) % catOrder.length].key);
   }
   function setInfo(open) {
     // Animate to the content's real height rather than a fixed guess —
@@ -274,8 +268,7 @@
     setInfo(false);
     overlay.hidden = false;
     panel.scrollTop = 0;
-    buildStrip(d.category);
-    syncStrip();
+    buildStrip(d.category, d.key);
     setLabel(null);
     panel.focus({ preventScroll: true });
   }
