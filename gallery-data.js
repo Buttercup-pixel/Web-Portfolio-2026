@@ -90,8 +90,8 @@ window.GALLERIES = {
  "elle2023": {
   "key": "elle2023",
   "category": "makeup",
-  "hover": "Elle Sverige 2023",
-  "title": "Elle Sverige 2023",
+  "hover": "Elle Sverige",
+  "title": "Elle Sverige",
   "thumb": {
    "src": "assets/images/elle2023/01.webp",
    "w": 1920,
@@ -210,8 +210,8 @@ window.GALLERIES = {
  "elleceen": {
   "key": "elleceen",
   "category": "makeup",
-  "hover": "Elle Sverige — Ceen",
-  "title": "Elle Sverige — Ceen",
+  "hover": "Elle Sverige",
+  "title": "Elle Sverige",
   "thumb": {
    "src": "assets/images/elleceen/01.webp",
    "w": 1632,
@@ -317,8 +317,8 @@ window.GALLERIES = {
  "metalhead": {
   "key": "metalhead",
   "category": "makeup",
-  "hover": "Metalhead Magazine",
-  "title": "Metalhead Magazine",
+  "hover": "Metalhead Mag",
+  "title": "Metalhead Mag",
   "thumb": {
    "src": "assets/images/metalhead/01.webp",
    "w": 600,
@@ -436,7 +436,7 @@ window.GALLERIES = {
   "key": "mhmarion",
   "category": "makeup",
   "hover": "Personal Project",
-  "title": "MH Marion — Personal Project",
+  "title": "Personal Project",
   "thumb": {
    "src": "assets/images/mhmarion/01.webp",
    "w": 1600,
@@ -536,8 +536,8 @@ window.GALLERIES = {
  "tovelo": {
   "key": "tovelo",
   "category": "makeup",
-  "hover": "Tove Lo — Le Mile",
-  "title": "Tove Lo — Le Mile",
+  "hover": "Le Mile / Tove Lo",
+  "title": "Le Mile / Tove Lo",
   "thumb": {
    "src": "assets/images/tovelo/01.webp",
    "w": 1040,
@@ -605,8 +605,8 @@ window.GALLERIES = {
  "voguecs": {
   "key": "voguecs",
   "category": "makeup",
-  "hover": "Vogue Czechoslovakia",
-  "title": "Vogue Czechoslovakia",
+  "hover": "Vogue",
+  "title": "Vogue",
   "thumb": {
    "src": "assets/images/voguecs/01.webp",
    "w": 827,
@@ -667,8 +667,8 @@ window.GALLERIES = {
  "wrpd": {
   "key": "wrpd",
   "category": "makeup",
-  "hover": "WRPD Magazine",
-  "title": "WRPD Magazine",
+  "hover": "WRPD Mag",
+  "title": "WRPD Mag",
   "thumb": {
    "src": "assets/images/wrpd/01.webp",
    "w": 819,

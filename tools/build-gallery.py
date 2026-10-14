@@ -25,13 +25,13 @@ def credits(key):
 # (key, category, folder(s), hover title, panel title, details)
 CASES = [
     ('domina', 'makeup', ['Makeup/Domina/Webp'], 'Domina Journal', 'Domina Journal', credits('domina')),
-    ('elle2023', 'makeup', ['Makeup/ELLE 2023/Webp'], 'Elle Sverige 2023', 'Elle Sverige 2023', credits('elle2023')),
-    ('elleceen', 'makeup', ['Makeup/ELLE_CEEN/Webp'], 'Elle Sverige — Ceen', 'Elle Sverige — Ceen', credits('elleceen')),
-    ('metalhead', 'makeup', ['Makeup/Metalhead/Webp'], 'Metalhead Magazine', 'Metalhead Magazine', credits('metalhead')),
-    ('mhmarion', 'makeup', ['Makeup/MH Marion/Webp'], 'Personal Project', 'MH Marion — Personal Project', credits('mhmarion')),
-    ('tovelo', 'makeup', ['Makeup/Tove Lo Milles/Webp'], 'Tove Lo — Le Mile', 'Tove Lo — Le Mile', credits('tovelo')),
-    ('voguecs', 'makeup', ['Makeup/VOGUE_CS/Webp'], 'Vogue Czechoslovakia', 'Vogue Czechoslovakia', credits('voguecs')),
-    ('wrpd', 'makeup', ['Makeup/WRPD/Webp'], 'WRPD Magazine', 'WRPD Magazine', credits('wrpd')),
+    ('elle2023', 'makeup', ['Makeup/ELLE 2023/Webp'], 'Elle Sverige', 'Elle Sverige', credits('elle2023')),
+    ('elleceen', 'makeup', ['Makeup/ELLE_CEEN/Webp'], 'Elle Sverige', 'Elle Sverige', credits('elleceen')),
+    ('metalhead', 'makeup', ['Makeup/Metalhead/Webp'], 'Metalhead Mag', 'Metalhead Mag', credits('metalhead')),
+    ('mhmarion', 'makeup', ['Makeup/MH Marion/Webp'], 'Personal Project', 'Personal Project', credits('mhmarion')),
+    ('tovelo', 'makeup', ['Makeup/Tove Lo Milles/Webp'], 'Le Mile / Tove Lo', 'Le Mile / Tove Lo', credits('tovelo')),
+    ('voguecs', 'makeup', ['Makeup/VOGUE_CS/Webp'], 'Vogue', 'Vogue', credits('voguecs')),
+    ('wrpd', 'makeup', ['Makeup/WRPD/Webp'], 'WRPD Mag', 'WRPD Mag', credits('wrpd')),
 
     ('alien', 'digital',
      ['Digital/Alien/3D Nail Alien/webp', 'Digital/Alien/3D Nail Human/Webp', 'Digital/Alien/Mag Covers/Webp'],
