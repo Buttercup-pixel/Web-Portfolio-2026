@@ -290,13 +290,15 @@
         if (pos === run - 1 && run % 2 === 1 && pos % 2 === 0) cls = 'solo';
       }
       if (cls === 'half') {
-        // A pair shares one row height: each photo is as wide as its own
-        // proportions need, so nothing is cropped or stretched.
         const row = el('div', 'photo-row');
-        [it, items[i + 1].it].forEach((p) => {
+        const partner = items[i + 1].it;
+        // Equal-width columns, one shared height (geometric mean of the two
+        // proportions), so a pair always lines up exactly.
+        const pairRatio = Math.sqrt((it.w / it.h) * (partner.w / partner.h));
+        [it, partner].forEach((p) => {
           const box = el('div', 'photo photo--half');
-          box.style.aspectRatio = `${p.w} / ${p.h}`;
-          box.style.flex = `${p.w / p.h} 1 0`;
+          box.style.aspectRatio = `${pairRatio}`;
+          box.style.flex = '1 1 0';
           fill(box, p);
           row.append(box);
         });
