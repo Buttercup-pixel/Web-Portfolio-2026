@@ -111,7 +111,7 @@
       order.forEach((g) => {
         const b = document.createElement('button');
         b.type = 'button';
-        b.className = `strip__thumb${['acte', 'l8', 'mamika'].includes(g.key) ? ' strip__thumb--logo' : ''}`;
+        b.className = `strip__thumb${['acte', 'mamika'].includes(g.key) ? ' strip__thumb--logo' : ''}`;
         b.dataset.key = g.key;
         if (g.key === key) b.classList.add('is-current');
         b.setAttribute('aria-label', g.hover);
