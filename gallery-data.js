@@ -943,15 +943,15 @@ window.GALLERIES = {
     "fb": "assets/images/l8/fb/02.jpg?v=17f00e61"
    },
    {
-    "src": "assets/images/l8/03.webp?v=209a809c",
-    "w": 2400,
-    "h": 1800,
+    "src": "assets/images/l8/03.webp?v=4c6e3dd5",
+    "w": 593,
+    "h": 488,
     "fb": "assets/images/l8/fb/03.jpg?v=a75db46b"
    },
    {
-    "src": "assets/images/l8/04.webp?v=4c6e3dd5",
-    "w": 593,
-    "h": 488,
+    "src": "assets/images/l8/04.webp?v=209a809c",
+    "w": 2400,
+    "h": 1800,
     "fb": "assets/images/l8/fb/04.jpg?v=27ca2ba5"
    },
    {
