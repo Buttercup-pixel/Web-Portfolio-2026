@@ -922,7 +922,11 @@ window.GALLERIES = {
     "t": "Visual direction, AI roadmap, LoRA training experiments, generated stills and video"
    },
    {
-    "t": "Made with Out of Office, a 7-person creative studio founded at Hyper Island."
+    "t": "Made with Out of Office, a 7-person creative studio founded at Hyper Island.",
+    "link": {
+     "text": "Out of Office",
+     "href": "https://www.linkedin.com/company/out-of-office-creative-studio/"
+    }
    }
   ]
  },

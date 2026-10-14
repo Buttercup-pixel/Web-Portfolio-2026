@@ -389,6 +389,8 @@ img { display: block; }
   transition: opacity 760ms cubic-bezier(0.22, 1, 0.36, 1) 240ms;
 }
 .gallery__details-inner p { width: 100%; user-select: none; }
+.gallery__details-inner a { color: inherit; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+.gallery__details-inner a:hover { color: var(--red); }
 .gallery__details-inner .credit-heading:not(:first-child) { margin-top: 12px; }
 .gallery__details-inner .credit-heading { font-size: 18px; line-height: 1.35; color: var(--hover-red); }
 

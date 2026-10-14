@@ -195,7 +195,21 @@
     detailsInner.replaceChildren();
     list.forEach((sec) => {
       if (sec.h) detailsInner.append(el('p', 'credit-heading', sec.h));
-      if (sec.t) detailsInner.append(el('p', null, sec.t));
+      if (sec.t) {
+        const p = el('p');
+        const i = sec.link ? sec.t.indexOf(sec.link.text) : -1;
+        if (i < 0) {
+          p.textContent = sec.t;
+        } else {
+          const a = document.createElement('a');
+          a.href = sec.link.href;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.textContent = sec.link.text;
+          p.append(sec.t.slice(0, i), a, sec.t.slice(i + sec.link.text.length));
+        }
+        detailsInner.append(p);
+      }
       (sec.lines || []).forEach((l) => detailsInner.append(el('p', null, l)));
     });
   }
@@ -340,7 +354,7 @@
   // Click anywhere inside the panel that isn't a photo (or the credits
   // accordion) closes it too.
   panel.addEventListener('click', (e) => {
-    if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('#strip')) return;
+    if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('#strip, a')) return;
     closeGallery();
   });
 
