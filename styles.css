@@ -190,58 +190,6 @@ img { display: block; }
   .item__title { font-size: 15px; letter-spacing: 0.02em; }
 }
 
-/* ---------- Go up (page) ---------- */
-.goup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  color: var(--ink);
-}
-.goup span {
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: 0.08em;
-  text-transform: lowercase;
-  color: var(--ink);
-}
-.goup .icon { width: 18px; height: 18px; }
-
-.goup--page {
-  position: absolute;
-  left: 50%;
-  bottom: 6px;
-  width: 64px;
-  height: 42px;
-  margin-left: -32px;
-  z-index: 2;
-  animation: goup-page 1.35s ease-in-out infinite;
-}
-@keyframes goup-page {
-  0%, 100% { transform: translateY(-6px); }
-  50%      { transform: translateY(0px); }
-}
-
-@media (max-width: 809.98px) {
-  /* The desktop bounce range (94-100px above its baseline) was tuned for
-     the old, much taller bottom padding — on the compact mobile padding
-     it landed on top of the images instead of below them. */
-  .goup--page {
-    bottom: 4px;
-    width: 56px;
-    height: 30px;
-    margin-left: -28px;
-    gap: 4px;
-    animation-name: goup-page-mobile;
-  }
-  .goup--page .icon { width: 14px; height: 14px; }
-  .goup--page span { font-size: 10px; }
-}
-@keyframes goup-page-mobile {
-  0%, 100% { transform: translateY(-8px); }
-  50%      { transform: translateY(-4px); }
-}
-
 /* ---------- Cursor labels ---------- */
 .cursor-label {
   position: fixed;
@@ -453,7 +401,7 @@ img { display: block; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .goup--page, .goup--panel, .hint { animation: none; }
+  .hint { animation: none; }
 }
 
 /* ---------- About overlay ----------

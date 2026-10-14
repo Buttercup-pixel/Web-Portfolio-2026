@@ -477,13 +477,6 @@
   });
   window.addEventListener('resize', () => { if (!about.hidden) sizeBoard(); });
 
-  /* ---------- Go up (page) ---------- */
-  $('#page-goup').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
-    window.history.replaceState(null, '', location.pathname + location.search);
-  });
-
   /* ---------- Brand name: back to home ---------- */
   $('#brand-btn').addEventListener('click', () => {
     closeGallery();
