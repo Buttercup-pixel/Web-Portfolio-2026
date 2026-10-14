@@ -415,9 +415,10 @@ img { display: block; }
   text-align: center;
 }
 .strip__track {
+  position: relative;
   display: flex; align-items: center; gap: 10px;
   width: 100%;
-  padding: 16px 8px;
+  padding: 16px calc(50% - var(--thumb, 56px) / 2 - 6px);
   overflow-x: auto;
   scrollbar-width: none;
 }
