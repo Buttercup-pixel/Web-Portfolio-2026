@@ -837,14 +837,14 @@ window.GALLERIES = {
   "hover": "Haglöfs — AI exploration",
   "title": "Haglöfs AI Visual Exploration — Hyper Island client project",
   "thumb": {
-   "src": "assets/images/haglofs/01.webp?v=812a2d26",
-   "w": 720,
-   "h": 434
+   "src": "assets/images/haglofs/01.webp?v=65ccfe06",
+   "w": 1200,
+   "h": 999
   },
   "main": {
-   "src": "assets/images/haglofs/01.webp?v=812a2d26",
-   "w": 720,
-   "h": 434
+   "src": "assets/images/haglofs/01.webp?v=65ccfe06",
+   "w": 1200,
+   "h": 999
   },
   "items": [
    {
