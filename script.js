@@ -199,7 +199,7 @@
     const ratio = m.w / m.h;
     mainBox.classList.toggle('gallery__main--wide', ratio >= 1.15);
     mainBox.style.aspectRatio = `${m.w} / ${m.h}`;
-    mainBox.style.setProperty('--w', `${Math.round(Math.min(ratio >= 1.15 ? 780 : 480, 552 * ratio))}px`);
+    mainBox.style.setProperty('--w', `${Math.round(ratio >= 1 ? 780 : Math.min(480, 552 * ratio))}px`);
     if (m.video) {
       const v = document.createElement('video');
       v.src = m.video;
@@ -238,7 +238,7 @@
       const box = el('div', `photo photo--${cls}`);
       if (cls === 'wide' || cls === 'solo') {
         box.style.aspectRatio = `${it.w} / ${it.h}`;
-        box.style.setProperty('--w', `${Math.round(Math.min(cls === 'wide' ? 780 : 382, 490 * (it.w / it.h)))}px`);
+        box.style.setProperty('--w', `${Math.round(cls === 'wide' ? 780 : Math.min(382, 490 * (it.w / it.h)))}px`);
       }
       box.append(makeImg(it, '', true));
       supporting.append(box);
