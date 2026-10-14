@@ -93,6 +93,7 @@ CASES = [
 
 # Logo-style thumbnails are contained on a light tile instead of cropped.
 CONTAIN = {'acte', 'l8', 'mamika'}
+PAIR_PORTRAITS = {'metalhead'}  # keep portraits paired, landscapes alone
 POSITION = {}  # per-key object-position overrides, e.g. {'domina': '50% 20%'}
 VIDEOS = {'alien': ('Digital/Alien/3D Nail Alien/Digital_3DAlien_1.mp4', 'alien-loop.mp4')}
 
@@ -171,7 +172,8 @@ for key, cat, folders, hover, title, details in CASES:
         shutil.copy(os.path.join(SRC, vsrc), os.path.join(dest, vname))
         main = dict(main, video=f'assets/images/{key}/{vname}')
     data[key] = {'key': key, 'category': cat, 'hover': hover, 'title': title,
-                 'thumb': imgs[0], 'main': main, 'items': rest, 'details': details}
+                 'thumb': imgs[0], 'main': main, 'items': rest, 'details': details,
+                 **({'pairPortraits': True} if key in PAIR_PORTRAITS else {})}
     order.append(key)
     print(f'{key}: {len(imgs)} images')
 

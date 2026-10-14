@@ -375,7 +375,8 @@ window.GALLERIES = {
      "Makeup assistant — Valentina Di Luca"
     ]
    }
-  ]
+  ],
+  "pairPortraits": true
  },
  "mhmarion": {
   "key": "mhmarion",

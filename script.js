@@ -232,7 +232,28 @@
       if (r < 0.6) return 'solo';
       return 'half';
     };
-    const items = d.items.map((it) => ({ it, k: kind(it) }));
+    // pairPortraits: never leave a lone portrait; a landscape waits until the
+    // pending portrait has found a partner, so landscapes always stand alone.
+    let list = d.items;
+    if (d.pairPortraits) {
+      list = [];
+      let pending = null;
+      let deferred = [];
+      d.items.forEach((it) => {
+        if (it.w >= it.h) {
+          if (pending) deferred.push(it); else list.push(it);
+        } else if (pending) {
+          list.push(pending, it, ...deferred);
+          pending = null;
+          deferred = [];
+        } else {
+          pending = it;
+        }
+      });
+      if (pending) list.push(pending);
+      list.push(...deferred);
+    }
+    const items = list.map((it) => ({ it, k: kind(it) }));
     for (let i = 0; i < items.length; i++) {
       const { it, k } = items[i];
       let cls = k;
