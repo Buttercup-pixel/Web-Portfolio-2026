@@ -366,11 +366,22 @@
   const aboutBtn = $('#about-btn');
   const aboutVideo = $('#about-video');
 
+  // Transparent video: Safari/WebKit needs HEVC with alpha (.mov), everything
+  // else uses VP9 with alpha (.webm).
+  function loadAboutVideo() {
+    if (aboutVideo.getAttribute('src')) return;
+    const ua = navigator.userAgent;
+    const webkit = /iPhone|iPad|iPod/.test(ua) || (/Safari/.test(ua) && !/Chrome|Chromium|CriOS|Edg|Android/.test(ua));
+    if (webkit) aboutVideo.src = 'assets/images/about-cutout.mov?v=1';
+    else if (aboutVideo.canPlayType('video/webm; codecs="vp9"')) aboutVideo.src = 'assets/images/about-cutout.webm?v=1';
+  }
+
   function openAbout() {
     closeGallery();
     about.hidden = false;
     aboutBtn.setAttribute('aria-expanded', 'true');
     aboutPanel.scrollTop = 0;
+    loadAboutVideo();
     if (!reduced) aboutVideo.play().catch(() => {});
     setLabel(null);
     sizeBoard();
