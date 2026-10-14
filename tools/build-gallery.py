@@ -5,7 +5,7 @@ gallery-data.js and regenerates the front-page grid markup in index.html.
 Usage: python3 tools/build-gallery.py [case-key ...]   (no keys = rebuild everything)
 Webp files are used first; a small resized jpg of the matching original
 (if one exists) is written next to each as a fallback."""
-import json, os, re, shutil, subprocess, sys
+import hashlib, json, os, re, shutil, subprocess, sys
 from PIL import Image
 
 MAX_SIDE = 2400  # longest side kept in the site copies
@@ -121,6 +121,11 @@ def find_original(folder, name):
     return None
 
 
+def tag(repo_path):
+    h = hashlib.md5(open(os.path.join(REPO, repo_path), 'rb').read()).hexdigest()[:8]
+    return f'{repo_path}?v={h}'
+
+
 def esc(s):
     return s.replace('&', '&amp;').replace('"', '&quot;').replace('<', '&lt;')
 
@@ -155,14 +160,14 @@ for key, cat, folders, hover, title, details in CASES:
                     im.thumbnail((MAX_SIDE, MAX_SIDE), Image.LANCZOS)
                     im.save(path, 'WEBP', quality=82, method=6)
             w, h = dims(path)
-            item = {'src': f'assets/images/{key}/{out}', 'w': w, 'h': h}
+            item = {'src': tag(f'assets/images/{key}/{out}'), 'w': w, 'h': h}
             orig = find_original(fdir, name)
             if orig:
                 fb = f'{n:02d}.jpg'
                 subprocess.run(['sips', '-Z', '1400', '-s', 'format', 'jpeg', '-s', 'formatOptions', '60',
                                 orig, '--out', os.path.join(dest, 'fb', fb)], capture_output=True)
                 if os.path.exists(os.path.join(dest, 'fb', fb)):
-                    item['fb'] = f'assets/images/{key}/fb/{fb}'
+                    item['fb'] = tag(f'assets/images/{key}/fb/{fb}')
             imgs.append(item)
     if not os.listdir(os.path.join(dest, 'fb')):
         os.rmdir(os.path.join(dest, 'fb'))
@@ -170,7 +175,7 @@ for key, cat, folders, hover, title, details in CASES:
     if key in VIDEOS:
         vsrc, vname = VIDEOS[key]
         shutil.copy(os.path.join(SRC, vsrc), os.path.join(dest, vname))
-        main = dict(main, video=f'assets/images/{key}/{vname}')
+        main = dict(main, video=tag(f'assets/images/{key}/{vname}'))
     data[key] = {'key': key, 'category': cat, 'hover': hover, 'title': title,
                  'thumb': imgs[0], 'main': main, 'items': rest, 'details': details,
                  **({'pairPortraits': True} if key in PAIR_PORTRAITS else {})}
