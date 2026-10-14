@@ -92,7 +92,7 @@ CASES = [
 ]
 
 # Logo-style thumbnails are contained on a light tile instead of cropped.
-CONTAIN = {'acte', 'l8', 'mamika'}
+CONTAIN = {'acte', 'mamika'}
 PAIR_PORTRAITS = {'metalhead'}  # keep portraits paired, landscapes alone
 POSITION = {}  # per-key object-position overrides, e.g. {'domina': '50% 20%'}
 # key: (video file, name in assets, webp that is the video's poster and gets replaced by it)
