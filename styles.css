@@ -355,13 +355,13 @@ img { display: block; }
 }
 .gallery__heading h2 {
   font-size: 18px; line-height: 1em; font-weight: 400;
-  color: var(--ink);
+  color: var(--red);
   text-align: center;
   text-wrap: balance;
   cursor: pointer;
 }
 .info-btn { display: flex; padding: 6px; border-radius: 100px; }
-.info-btn .icon { width: 16px; height: 16px; transition: transform 1100ms cubic-bezier(0.22, 1, 0.36, 1); }
+.info-btn .icon { width: 16px; height: 16px; stroke: var(--red); transition: transform 1100ms cubic-bezier(0.22, 1, 0.36, 1); }
 .info-btn.is-open .icon { transform: rotate(180deg); }
 
 /* Accordion: animates open/closed via max-height (set inline by JS to the
