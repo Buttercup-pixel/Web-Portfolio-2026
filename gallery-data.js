@@ -814,21 +814,21 @@ window.GALLERIES = {
   },
   "items": [
    {
-    "src": "assets/images/acte/02.webp?v=84238313",
-    "w": 2400,
-    "h": 1525,
+    "src": "assets/images/acte/02.webp?v=0b20046c",
+    "w": 1448,
+    "h": 1086,
     "fb": "assets/images/acte/fb/02.jpg?v=c47b8cef"
    },
    {
-    "src": "assets/images/acte/03.webp?v=1c26dc26",
+    "src": "assets/images/acte/03.webp?v=84238313",
     "w": 2400,
-    "h": 353,
+    "h": 1525,
     "fb": "assets/images/acte/fb/03.jpg?v=58994bfe"
    },
    {
-    "src": "assets/images/acte/04.webp?v=0b20046c",
-    "w": 1448,
-    "h": 1086,
+    "src": "assets/images/acte/04.webp?v=1c26dc26",
+    "w": 2400,
+    "h": 353,
     "fb": "assets/images/acte/fb/04.jpg?v=19e4f2d2"
    },
    {
@@ -1095,45 +1095,40 @@ window.GALLERIES = {
   },
   "items": [
    {
-    "src": "assets/images/mamika/02.webp?v=0fe21c76",
-    "w": 2382,
-    "h": 1514,
+    "src": "assets/images/mamika/02.webp?v=c25990f9",
+    "w": 1536,
+    "h": 1024,
     "fb": "assets/images/mamika/fb/02.jpg?v=1816f6db"
    },
    {
-    "src": "assets/images/mamika/03.webp?v=70f30664",
+    "src": "assets/images/mamika/03.webp?v=0fe21c76",
     "w": 2382,
-    "h": 350
+    "h": 1514,
+    "fb": "assets/images/mamika/fb/03.jpg?v=2185f785"
    },
    {
-    "src": "assets/images/mamika/04.jpg?v=11a9c121",
-    "w": 1024,
-    "h": 1536,
+    "src": "assets/images/mamika/04.webp?v=70f30664",
+    "w": 2382,
+    "h": 350,
     "fb": "assets/images/mamika/fb/04.jpg?v=ec99ed06"
    },
    {
-    "src": "assets/images/mamika/05.webp?v=c25990f9",
-    "w": 1536,
-    "h": 1024,
+    "src": "assets/images/mamika/05.webp?v=970d24f6",
+    "w": 1374,
+    "h": 1145,
     "fb": "assets/images/mamika/fb/05.jpg?v=adf1c8ff"
    },
    {
-    "src": "assets/images/mamika/06.webp?v=970d24f6",
+    "src": "assets/images/mamika/06.webp?v=1cb53cba",
     "w": 1374,
     "h": 1145,
     "fb": "assets/images/mamika/fb/06.jpg?v=86f4f4b9"
    },
    {
-    "src": "assets/images/mamika/07.webp?v=1cb53cba",
-    "w": 1374,
-    "h": 1145,
-    "fb": "assets/images/mamika/fb/07.jpg?v=79450996"
-   },
-   {
-    "src": "assets/images/mamika/08.webp?v=464fc023",
+    "src": "assets/images/mamika/07.webp?v=464fc023",
     "w": 2400,
     "h": 1350,
-    "fb": "assets/images/mamika/fb/08.jpg?v=5baaaa9c"
+    "fb": "assets/images/mamika/fb/07.jpg?v=79450996"
    }
   ],
   "details": [
