@@ -60,6 +60,7 @@ body {
   color: var(--ink);
   font-family: var(--font);
   -webkit-font-smoothing: antialiased;
+  text-transform: lowercase;
 }
 
 p, h2 { margin: 0; }
@@ -284,7 +285,7 @@ img { display: block; }
   letter-spacing: 0.08em;
   line-height: 1;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: lowercase;
   white-space: nowrap;
   transform: translate(-50%, -50%);
   animation: hint-bounce 1.35s ease-in-out infinite;
