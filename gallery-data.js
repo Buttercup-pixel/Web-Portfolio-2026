@@ -962,22 +962,22 @@ window.GALLERIES = {
   "hover": "L8 Hasselblad — Rebrand",
   "title": "L8 Hasselblad Rebrand Proposal — Hyper Island client project",
   "thumb": {
-   "src": "assets/images/l8/01.webp?v=4c6e3dd5",
-   "w": 593,
-   "h": 488,
-   "fb": "assets/images/l8/fb/01.jpg?v=9219ecf5"
+   "src": "assets/images/l8/01.webp?v=07509c72",
+   "w": 2400,
+   "h": 1750,
+   "fb": "assets/images/l8/fb/01.jpg?v=d7161984"
   },
   "main": {
-   "src": "assets/images/l8/01.webp?v=4c6e3dd5",
-   "w": 593,
-   "h": 488,
-   "fb": "assets/images/l8/fb/01.jpg?v=9219ecf5"
+   "src": "assets/images/l8/01.webp?v=07509c72",
+   "w": 2400,
+   "h": 1750,
+   "fb": "assets/images/l8/fb/01.jpg?v=d7161984"
   },
   "items": [
    {
-    "src": "assets/images/l8/02.webp?v=07509c72",
+    "src": "assets/images/l8/02.webp?v=f7c305ea",
     "w": 2400,
-    "h": 1750,
+    "h": 937,
     "fb": "assets/images/l8/fb/02.jpg?v=17f00e61"
    },
    {
@@ -987,51 +987,28 @@ window.GALLERIES = {
     "fb": "assets/images/l8/fb/03.jpg?v=a75db46b"
    },
    {
-    "src": "assets/images/l8/04.webp?v=f7c305ea",
-    "w": 2400,
-    "h": 937,
-    "fb": "assets/images/l8/fb/04.jpg?v=d7ab6336"
+    "src": "assets/images/l8/04.webp?v=4c6e3dd5",
+    "w": 593,
+    "h": 488,
+    "fb": "assets/images/l8/fb/04.jpg?v=27ca2ba5"
    },
    {
-    "src": "assets/images/l8/05.webp?v=c77f61e9",
-    "w": 197,
-    "h": 162
-   },
-   {
-    "src": "assets/images/l8/06.webp?v=b6217f2c",
+    "src": "assets/images/l8/05.webp?v=b6217f2c",
     "w": 2400,
     "h": 1351,
-    "fb": "assets/images/l8/fb/06.jpg?v=c276ac53"
+    "fb": "assets/images/l8/fb/05.jpg?v=c276ac53"
    },
    {
-    "src": "assets/images/l8/07.webp?v=bb6b2d04",
-    "w": 425,
-    "h": 610,
-    "fb": "assets/images/l8/fb/07.jpg?v=d941ff72"
-   },
-   {
-    "src": "assets/images/l8/08.webp?v=f28e5dda",
-    "w": 425,
-    "h": 610,
-    "fb": "assets/images/l8/fb/08.jpg?v=d77ce017"
-   },
-   {
-    "src": "assets/images/l8/09.webp?v=95d876ee",
+    "src": "assets/images/l8/06.webp?v=95d876ee",
     "w": 2400,
     "h": 1351,
-    "fb": "assets/images/l8/fb/09.jpg?v=c1744499"
+    "fb": "assets/images/l8/fb/06.jpg?v=c1744499"
    },
    {
-    "src": "assets/images/l8/10.webp?v=919164fb",
-    "w": 2400,
-    "h": 2320,
-    "fb": "assets/images/l8/fb/10.jpg?v=2c5f2aa6"
-   },
-   {
-    "src": "assets/images/l8/11.webp?v=d7163acf",
+    "src": "assets/images/l8/07.webp?v=d7163acf",
     "w": 2400,
     "h": 1448,
-    "fb": "assets/images/l8/fb/11.jpg?v=b825324c"
+    "fb": "assets/images/l8/fb/07.jpg?v=b825324c"
    }
   ],
   "details": [
