@@ -102,23 +102,46 @@
   const all = Object.values(galleries);
   let order = [];
   let stripCat = null;
+  const COPIES = 5;
   function buildStrip(cat) {
     if (cat === stripCat) return;
     stripCat = cat;
     order = all.filter((g) => g.category === cat);
     stripTrack.replaceChildren();
-    order.forEach((g) => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = `strip__thumb${['acte', 'l8', 'mamika'].includes(g.key) ? ' strip__thumb--logo' : ''}`;
-      b.dataset.key = g.key;
-      b.setAttribute('aria-label', g.hover);
-      b.title = g.hover;
-      b.append(makeImg(g.thumb, '', true));
-      b.addEventListener('click', () => go(g.key));
-      stripTrack.append(b);
-    });
+    for (let c = 0; c < COPIES; c++) {
+      order.forEach((g) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = `strip__thumb${['acte', 'l8', 'mamika'].includes(g.key) ? ' strip__thumb--logo' : ''}`;
+        b.dataset.key = g.key;
+        b.setAttribute('aria-label', g.hover);
+        b.title = g.hover;
+        if (c !== 2) { b.tabIndex = -1; b.setAttribute('aria-hidden', 'true'); }
+        b.append(makeImg(g.thumb, '', true));
+        b.addEventListener('click', () => go(g.key));
+        stripTrack.append(b);
+      });
+    }
+    stripTrack.scrollLeft = setWidth() * 2;
   }
+  function setWidth() {
+    const t = stripTrack.children;
+    return t.length > order.length ? t[order.length].offsetLeft - t[0].offsetLeft : 0;
+  }
+  function loopStrip() {
+    const w = setWidth();
+    if (!w) return;
+    if (stripTrack.scrollLeft < w) stripTrack.scrollLeft += w;
+    else if (stripTrack.scrollLeft >= w * 3) stripTrack.scrollLeft -= w;
+  }
+  stripTrack.addEventListener('scroll', loopStrip, { passive: true });
+  // At the bottom of a project, scrolling further slides the filmstrip sideways.
+  panel.addEventListener('wheel', (e) => {
+    if (!current || e.deltaY <= 0) return;
+    if (panel.scrollTop + panel.clientHeight < panel.scrollHeight - 2) return;
+    e.preventDefault();
+    stripTrack.scrollLeft += e.deltaY;
+  }, { passive: false });
   function go(key) { openGallery($(`.item[data-gallery="${key}"]`)); }
   function step(dir) {
     if (!current) return;
@@ -127,9 +150,7 @@
   }
   function syncStrip() {
     $$('.strip__thumb', stripTrack).forEach((t) => {
-      const on = t.dataset.key === current.key;
-      t.classList.toggle('is-current', on);
-      if (on) stripTrack.scrollLeft = t.offsetLeft - (stripTrack.clientWidth - t.offsetWidth) / 2;
+      t.classList.toggle('is-current', t.dataset.key === current.key);
     });
   }
   function setInfo(open) {
