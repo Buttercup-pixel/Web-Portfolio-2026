@@ -268,7 +268,16 @@
         box.style.aspectRatio = `${it.w} / ${it.h}`;
         box.style.setProperty('--w', `${Math.round(cls === 'wide' ? 780 : Math.min(382, 490 * (it.w / it.h)))}px`);
       }
-      box.append(makeImg(it, '', true));
+      if (it.video) {
+        const v = document.createElement('video');
+        v.src = it.video;
+        v.poster = it.src;
+        v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
+        v.setAttribute('aria-hidden', 'true');
+        box.append(v);
+      } else {
+        box.append(makeImg(it, '', true));
+      }
       supporting.append(box);
     }
   }

@@ -672,94 +672,56 @@ window.GALLERIES = {
   "hover": "Alien — School project",
   "title": "Alien 3D Nails & Editorial — Hyper Island",
   "thumb": {
-   "src": "assets/images/alien/01.webp?v=f78bd094",
-   "w": 1920,
-   "h": 1080
+   "src": "assets/images/alien/01.webp?v=06bbd96f",
+   "w": 2160,
+   "h": 1620
   },
   "main": {
-   "src": "assets/images/alien/01.webp?v=f78bd094",
-   "w": 1920,
-   "h": 1080,
-   "video": "assets/images/alien/alien-loop.mp4?v=d7fcf759"
+   "src": "assets/images/alien/01.webp?v=06bbd96f",
+   "w": 2160,
+   "h": 1620
   },
   "items": [
    {
-    "src": "assets/images/alien/02.webp?v=87bb1adf",
-    "w": 1104,
-    "h": 2400,
-    "fb": "assets/images/alien/fb/02.jpg?v=8ddab86e"
+    "src": "assets/images/alien/02.webp?v=ecacac12",
+    "w": 1620,
+    "h": 2160
    },
    {
-    "src": "assets/images/alien/03.webp?v=06bbd96f",
+    "src": "assets/images/alien/03.webp?v=5ea0734e",
+    "w": 1620,
+    "h": 2160
+   },
+   {
+    "src": "assets/images/alien/04.webp?v=90e5fc7c",
+    "w": 1620,
+    "h": 2160
+   },
+   {
+    "src": "assets/images/alien/05.webp?v=52917f67",
+    "w": 1620,
+    "h": 2160
+   },
+   {
+    "src": "assets/images/alien/06.webp?v=f1cc5908",
     "w": 2160,
-    "h": 1620,
-    "fb": "assets/images/alien/fb/03.jpg?v=bc837204"
+    "h": 1620
    },
    {
-    "src": "assets/images/alien/04.webp?v=ecacac12",
-    "w": 1620,
-    "h": 2160,
-    "fb": "assets/images/alien/fb/04.jpg?v=69f15663"
-   },
-   {
-    "src": "assets/images/alien/05.webp?v=7d3184e3",
-    "w": 1620,
-    "h": 2160,
-    "fb": "assets/images/alien/fb/05.jpg?v=cba317fc"
-   },
-   {
-    "src": "assets/images/alien/06.webp?v=90e5fc7c",
-    "w": 1620,
-    "h": 2160,
-    "fb": "assets/images/alien/fb/06.jpg?v=a101c000"
-   },
-   {
-    "src": "assets/images/alien/07.webp?v=52917f67",
-    "w": 1620,
-    "h": 2160,
-    "fb": "assets/images/alien/fb/07.jpg?v=479eef81"
-   },
-   {
-    "src": "assets/images/alien/08.webp?v=f1cc5908",
-    "w": 2160,
-    "h": 1620,
-    "fb": "assets/images/alien/fb/08.jpg?v=ce7c46f2"
-   },
-   {
-    "src": "assets/images/alien/09.webp?v=f605d251",
-    "w": 2160,
-    "h": 1620,
-    "fb": "assets/images/alien/fb/09.jpg?v=45bd0239"
-   },
-   {
-    "src": "assets/images/alien/10.webp?v=e2f5168d",
-    "w": 1620,
-    "h": 2160,
-    "fb": "assets/images/alien/fb/10.jpg?v=ba429bcf"
-   },
-   {
-    "src": "assets/images/alien/11.webp?v=5ea0734e",
-    "w": 1620,
-    "h": 2160,
-    "fb": "assets/images/alien/fb/11.jpg?v=0759b7de"
-   },
-   {
-    "src": "assets/images/alien/12.webp?v=3d9e0ea3",
+    "src": "assets/images/alien/07.webp?v=f78bd094",
     "w": 1920,
     "h": 1080,
-    "fb": "assets/images/alien/fb/12.jpg?v=24f4f8ae"
+    "video": "assets/images/alien/alien-loop.mp4?v=d7fcf759"
    },
    {
-    "src": "assets/images/alien/13.webp?v=ff7ea5b5",
-    "w": 640,
-    "h": 850,
-    "fb": "assets/images/alien/fb/13.jpg?v=b8e59703"
-   },
-   {
-    "src": "assets/images/alien/14.webp?v=e284101e",
+    "src": "assets/images/alien/08.webp?v=e284101e",
     "w": 643,
-    "h": 864,
-    "fb": "assets/images/alien/fb/14.jpg?v=2b697261"
+    "h": 864
+   },
+   {
+    "src": "assets/images/alien/09.webp?v=ff7ea5b5",
+    "w": 640,
+    "h": 850
    }
   ],
   "details": [

@@ -34,7 +34,7 @@ CASES = [
     ('wrpd', 'makeup', ['Makeup/WRPD/Webp'], 'WRPD Mag', 'WRPD Mag', credits('wrpd')),
 
     ('alien', 'digital',
-     ['Digital/Alien/3D Nail Alien/webp', 'Digital/Alien/3D Nail Human/Webp', 'Digital/Alien/Mag Covers/Webp'],
+     ['Digital/Alien/Webp'],
      'Alien — School project', 'Alien 3D Nails & Editorial — Hyper Island', [
         {'h': 'brief', 't': 'Build an alien world and create its artifacts.'},
         {'h': 'concept', 't': 'Two parallel worlds collide and become obsessed with each other’s beauty. Aliens try to look human, and humans try to look alien. I 3D sculpted the aliens’ natural nails and a wearable press-on set for humans inspired by them, then created a photoshoot with fashion magazine covers from both worlds.'},
@@ -95,7 +95,8 @@ CASES = [
 CONTAIN = {'acte', 'l8', 'mamika'}
 PAIR_PORTRAITS = {'metalhead'}  # keep portraits paired, landscapes alone
 POSITION = {}  # per-key object-position overrides, e.g. {'domina': '50% 20%'}
-VIDEOS = {'alien': ('Digital/Alien/3D Nail Alien/Digital_3DAlien_1.mp4', 'alien-loop.mp4')}
+# key: (video file, name in assets, webp that is the video's poster and gets replaced by it)
+VIDEOS = {'alien': ('Digital/Alien/Digital_3DAlien_1.mp4', 'alien-loop.mp4', 'Digital_Alien_7webp.webp')}
 
 
 def natkey(name):
@@ -145,6 +146,7 @@ for key, cat, folders, hover, title, details in CASES:
             os.remove(os.path.join(root, f))
     os.makedirs(os.path.join(dest, 'fb'), exist_ok=True)
     imgs = []
+    names = []
     n = 0
     for folder in folders:
         fdir = os.path.join(SRC, folder)
@@ -169,13 +171,18 @@ for key, cat, folders, hover, title, details in CASES:
                 if os.path.exists(os.path.join(dest, 'fb', fb)):
                     item['fb'] = tag(f'assets/images/{key}/fb/{fb}')
             imgs.append(item)
+            names.append(name)
     if not os.listdir(os.path.join(dest, 'fb')):
         os.rmdir(os.path.join(dest, 'fb'))
     main, rest = imgs[0], imgs[1:]
     if key in VIDEOS:
-        vsrc, vname = VIDEOS[key]
+        vsrc, vname, poster = VIDEOS[key]
         shutil.copy(os.path.join(SRC, vsrc), os.path.join(dest, vname))
-        main = dict(main, video=tag(f'assets/images/{key}/{vname}'))
+        vurl = tag(f'assets/images/{key}/{vname}')
+        for it, nm in zip(imgs, names):
+            if nm == poster:
+                it['video'] = vurl
+        main, rest = imgs[0], imgs[1:]
     data[key] = {'key': key, 'category': cat, 'hover': hover, 'title': title,
                  'thumb': imgs[0], 'main': main, 'items': rest, 'details': details,
                  **({'pairPortraits': True} if key in PAIR_PORTRAITS else {})}
