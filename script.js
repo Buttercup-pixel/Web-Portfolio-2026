@@ -122,8 +122,20 @@
         stripTrack.append(b);
       });
     }
+    sizeStrip();
+  }
+  // Make one full set of thumbnails at least as wide as the visible strip, so
+  // a project never shows up twice at once while the strip loops.
+  function sizeStrip() {
+    if (!order.length || !stripTrack.clientWidth) return;
+    const gap = 10;
+    const vw = stripTrack.clientWidth - 16;
+    const n = order.length;
+    const size = Math.min(130, Math.max(56, Math.ceil((vw - 12 - n * gap) / (n - 1)) + 2));
+    stripTrack.style.setProperty('--thumb', `${size}px`);
     stripTrack.scrollLeft = setWidth() * 2;
   }
+  window.addEventListener('resize', () => { if (!overlay.hidden) sizeStrip(); });
   function setWidth() {
     const t = stripTrack.children;
     return t.length > order.length ? t[order.length].offsetLeft - t[0].offsetLeft : 0;

@@ -419,7 +419,7 @@ img { display: block; }
 .strip__track::-webkit-scrollbar { display: none; }
 .strip__thumb {
   flex: none;
-  width: 56px; height: 56px;
+  width: var(--thumb, 56px); height: var(--thumb, 56px);
   overflow: hidden;
   opacity: 0.5;
   filter: blur(1.5px);
