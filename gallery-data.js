@@ -19,8 +19,8 @@ window.GALLERIES = {
   "items": [
    {
     "src": "assets/images/domina/02.webp",
-    "w": 2000,
-    "h": 1250,
+    "w": 1600,
+    "h": 2000,
     "fb": "assets/images/domina/fb/02.jpg"
    },
    {
@@ -43,8 +43,8 @@ window.GALLERIES = {
    },
    {
     "src": "assets/images/domina/06.webp",
-    "w": 1600,
-    "h": 2000,
+    "w": 2000,
+    "h": 1250,
     "fb": "assets/images/domina/fb/06.jpg"
    },
    {
@@ -56,20 +56,7 @@ window.GALLERIES = {
    {
     "src": "assets/images/domina/08.webp",
     "w": 1600,
-    "h": 2000,
-    "fb": "assets/images/domina/fb/08.jpg"
-   },
-   {
-    "src": "assets/images/domina/09.webp",
-    "w": 1600,
-    "h": 2000,
-    "fb": "assets/images/domina/fb/09.jpg"
-   },
-   {
-    "src": "assets/images/domina/10.webp",
-    "w": 1600,
-    "h": 2000,
-    "fb": "assets/images/domina/fb/10.jpg"
+    "h": 2000
    }
   ],
   "details": [

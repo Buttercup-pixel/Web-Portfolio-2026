@@ -2,7 +2,7 @@
 """Copies the sorted portfolio folders into assets/images/<slug>/, writes
 gallery-data.js and regenerates the front-page grid markup in index.html.
 
-Usage: python3 tools/build-gallery.py [path/to/Portfolio_2026]
+Usage: python3 tools/build-gallery.py [case-key ...]   (no keys = rebuild everything)
 Webp files are used first; a small resized jpg of the matching original
 (if one exists) is written next to each as a fallback."""
 import json, os, re, shutil, subprocess, sys
@@ -11,8 +11,8 @@ from PIL import Image
 MAX_SIDE = 2400  # longest side kept in the site copies
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.expanduser(
-    '~/Library/Mobile Documents/com~apple~CloudDocs/Portfolio_2026')
+SRC = os.path.expanduser('~/Library/Mobile Documents/com~apple~CloudDocs/Portfolio_2026')
+ONLY = set(sys.argv[1:])  # optional: rebuild just these case keys (e.g. domina)
 OUT = os.path.join(REPO, 'assets', 'images')
 
 CREDITS = json.load(open(os.path.join(REPO, 'tools', 'makeup-credits.json')))
@@ -112,9 +112,10 @@ def find_original(folder, name):
     parent = os.path.dirname(folder)
     stem = re.sub(r'\.(webp|jpg|jpeg|png)$', '', name, flags=re.I)
     stem = re.sub(r'\.(webp|jpg|jpeg|png)$', '', stem, flags=re.I)
+    norm = lambda x: re.sub(r'\d+', lambda m: str(int(m.group())), x)
     for f in os.listdir(parent):
         base, ext = os.path.splitext(f)
-        if base == stem and ext.lower() in ('.jpg', '.jpeg', '.png'):
+        if norm(base) == norm(stem) and ext.lower() in ('.jpg', '.jpeg', '.png'):
             return os.path.join(parent, f)
     return None
 
@@ -124,10 +125,19 @@ def esc(s):
 
 
 data, order = {}, []
+existing = {}
+if ONLY:
+    existing = json.loads(re.sub(r'^window.GALLERIES = |;\s*$', '', open(os.path.join(REPO, 'gallery-data.js')).read()))
 for key, cat, folders, hover, title, details in CASES:
+    if ONLY and key not in ONLY:
+        data[key] = existing[key]
+        order.append(key)
+        continue
     dest = os.path.join(OUT, key)
-    shutil.rmtree(dest, ignore_errors=True)
-    os.makedirs(os.path.join(dest, 'fb'))
+    for root, _, files in os.walk(dest):
+        for f in files:
+            os.remove(os.path.join(root, f))
+    os.makedirs(os.path.join(dest, 'fb'), exist_ok=True)
     imgs = []
     n = 0
     for folder in folders:
@@ -193,6 +203,5 @@ html = open(html_path).read()
 a = html.index('      <div class="col col--up"')
 b = html.index('    </div>\n\n    <a class="goup goup--page"')
 html = html[:a] + col('makeup', 'col--up', '') + '\n' + col('digital', 'col--down', '') + html[b:]
-html = re.sub(r'(og:image" content=")[^"]*', r'\g<1>' + data[order[0]]['thumb']['src'], html)
 open(html_path, 'w').write(html)
 print('done')
