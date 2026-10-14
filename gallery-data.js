@@ -151,24 +151,6 @@ window.GALLERIES = {
     "w": 1536,
     "h": 2048,
     "fb": "assets/images/elle2023/fb/11.jpg"
-   },
-   {
-    "src": "assets/images/elle2023/12.webp",
-    "w": 1536,
-    "h": 2048,
-    "fb": "assets/images/elle2023/fb/12.jpg"
-   },
-   {
-    "src": "assets/images/elle2023/13.webp",
-    "w": 1536,
-    "h": 2048,
-    "fb": "assets/images/elle2023/fb/13.jpg"
-   },
-   {
-    "src": "assets/images/elle2023/14.webp",
-    "w": 1536,
-    "h": 2048,
-    "fb": "assets/images/elle2023/fb/14.jpg"
    }
   ],
   "details": [
@@ -259,24 +241,6 @@ window.GALLERIES = {
     "w": 1613,
     "h": 2000,
     "fb": "assets/images/elleceen/fb/09.jpg"
-   },
-   {
-    "src": "assets/images/elleceen/10.webp",
-    "w": 1618,
-    "h": 2000,
-    "fb": "assets/images/elleceen/fb/10.jpg"
-   },
-   {
-    "src": "assets/images/elleceen/11.webp",
-    "w": 1515,
-    "h": 2000,
-    "fb": "assets/images/elleceen/fb/11.jpg"
-   },
-   {
-    "src": "assets/images/elleceen/12.webp",
-    "w": 1635,
-    "h": 2000,
-    "fb": "assets/images/elleceen/fb/12.jpg"
    }
   ],
   "details": [
@@ -369,14 +333,14 @@ window.GALLERIES = {
    },
    {
     "src": "assets/images/metalhead/10.webp",
-    "w": 600,
-    "h": 750,
+    "w": 1920,
+    "h": 2400,
     "fb": "assets/images/metalhead/fb/10.jpg"
    },
    {
     "src": "assets/images/metalhead/11.webp",
-    "w": 1920,
-    "h": 2400,
+    "w": 600,
+    "h": 750,
     "fb": "assets/images/metalhead/fb/11.jpg"
    },
    {
@@ -387,21 +351,15 @@ window.GALLERIES = {
    },
    {
     "src": "assets/images/metalhead/13.webp",
-    "w": 600,
-    "h": 750,
+    "w": 750,
+    "h": 600,
     "fb": "assets/images/metalhead/fb/13.jpg"
    },
    {
     "src": "assets/images/metalhead/14.webp",
-    "w": 750,
-    "h": 600,
-    "fb": "assets/images/metalhead/fb/14.jpg"
-   },
-   {
-    "src": "assets/images/metalhead/15.webp",
     "w": 1920,
     "h": 2400,
-    "fb": "assets/images/metalhead/fb/15.jpg"
+    "fb": "assets/images/metalhead/fb/14.jpg"
    }
   ],
   "details": [
@@ -690,14 +648,8 @@ window.GALLERIES = {
    {
     "src": "assets/images/wrpd/05.webp",
     "w": 1920,
-    "h": 2400,
-    "fb": "assets/images/wrpd/fb/05.jpg"
-   },
-   {
-    "src": "assets/images/wrpd/06.webp",
-    "w": 1920,
     "h": 1100,
-    "fb": "assets/images/wrpd/fb/06.jpg"
+    "fb": "assets/images/wrpd/fb/05.jpg"
    }
   ],
   "details": [
