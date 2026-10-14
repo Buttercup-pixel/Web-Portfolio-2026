@@ -350,16 +350,10 @@ window.GALLERIES = {
     "fb": "assets/images/metalhead/fb/12.jpg?v=050dd706"
    },
    {
-    "src": "assets/images/metalhead/13.webp?v=23987c5a",
-    "w": 750,
-    "h": 600,
-    "fb": "assets/images/metalhead/fb/13.jpg?v=61855060"
-   },
-   {
-    "src": "assets/images/metalhead/14.webp?v=507db9e2",
+    "src": "assets/images/metalhead/13.webp?v=507db9e2",
     "w": 1920,
     "h": 2400,
-    "fb": "assets/images/metalhead/fb/14.jpg?v=3d4e3363"
+    "fb": "assets/images/metalhead/fb/13.jpg?v=3d4e3363"
    }
   ],
   "details": [
