@@ -378,8 +378,8 @@
     if (aboutVideo.getAttribute('src')) return;
     const ua = navigator.userAgent;
     const webkit = /iPhone|iPad|iPod/.test(ua) || (/Safari/.test(ua) && !/Chrome|Chromium|CriOS|Edg|Android/.test(ua));
-    if (webkit) aboutVideo.src = 'assets/images/about-cutout.mov?v=1';
-    else if (aboutVideo.canPlayType('video/webm; codecs="vp9"')) aboutVideo.src = 'assets/images/about-cutout.webm?v=1';
+    if (webkit) aboutVideo.src = 'assets/images/about-cutout.mov?v=2';
+    else if (aboutVideo.canPlayType('video/webm; codecs="vp9"')) aboutVideo.src = 'assets/images/about-cutout.webm?v=2';
   }
 
   function openAbout() {
