@@ -91,14 +91,14 @@ window.GALLERIES = {
   "title": "Elle Sverige 2023",
   "thumb": {
    "src": "assets/images/elle2023/01.webp",
-   "w": 4500,
-   "h": 5625,
+   "w": 1920,
+   "h": 2400,
    "fb": "assets/images/elle2023/fb/01.jpg"
   },
   "main": {
    "src": "assets/images/elle2023/01.webp",
-   "w": 4500,
-   "h": 5625,
+   "w": 1920,
+   "h": 2400,
    "fb": "assets/images/elle2023/fb/01.jpg"
   },
   "items": [
@@ -201,12 +201,14 @@ window.GALLERIES = {
   "thumb": {
    "src": "assets/images/elleceen/01.webp",
    "w": 1632,
-   "h": 2000
+   "h": 2000,
+   "fb": "assets/images/elleceen/fb/01.jpg"
   },
   "main": {
    "src": "assets/images/elleceen/01.webp",
    "w": 1632,
-   "h": 2000
+   "h": 2000,
+   "fb": "assets/images/elleceen/fb/01.jpg"
   },
   "items": [
    {
@@ -230,7 +232,8 @@ window.GALLERIES = {
    {
     "src": "assets/images/elleceen/05.webp",
     "w": 1628,
-    "h": 2000
+    "h": 2000,
+    "fb": "assets/images/elleceen/fb/05.jpg"
    },
    {
     "src": "assets/images/elleceen/06.webp",
@@ -241,7 +244,8 @@ window.GALLERIES = {
    {
     "src": "assets/images/elleceen/07.webp",
     "w": 1611,
-    "h": 2000
+    "h": 2000,
+    "fb": "assets/images/elleceen/fb/07.jpg"
    },
    {
     "src": "assets/images/elleceen/08.webp",
@@ -252,7 +256,8 @@ window.GALLERIES = {
    {
     "src": "assets/images/elleceen/09.webp",
     "w": 1613,
-    "h": 2000
+    "h": 2000,
+    "fb": "assets/images/elleceen/fb/09.jpg"
    },
    {
     "src": "assets/images/elleceen/10.webp",
@@ -263,7 +268,8 @@ window.GALLERIES = {
    {
     "src": "assets/images/elleceen/11.webp",
     "w": 1515,
-    "h": 2000
+    "h": 2000,
+    "fb": "assets/images/elleceen/fb/11.jpg"
    },
    {
     "src": "assets/images/elleceen/12.webp",
@@ -304,8 +310,8 @@ window.GALLERIES = {
   "items": [
    {
     "src": "assets/images/metalhead/02.webp",
-    "w": 4000,
-    "h": 4998,
+    "w": 1921,
+    "h": 2400,
     "fb": "assets/images/metalhead/fb/02.jpg"
    },
    {
@@ -328,8 +334,8 @@ window.GALLERIES = {
    },
    {
     "src": "assets/images/metalhead/06.webp",
-    "w": 3997,
-    "h": 5000,
+    "w": 1919,
+    "h": 2400,
     "fb": "assets/images/metalhead/fb/06.jpg"
    },
    {
@@ -358,8 +364,8 @@ window.GALLERIES = {
    },
    {
     "src": "assets/images/metalhead/11.webp",
-    "w": 4000,
-    "h": 5000,
+    "w": 1920,
+    "h": 2400,
     "fb": "assets/images/metalhead/fb/11.jpg"
    },
    {
@@ -382,8 +388,8 @@ window.GALLERIES = {
    },
    {
     "src": "assets/images/metalhead/15.webp",
-    "w": 4000,
-    "h": 5000,
+    "w": 1920,
+    "h": 2400,
     "fb": "assets/images/metalhead/fb/15.jpg"
    }
   ],
@@ -406,80 +412,81 @@ window.GALLERIES = {
   "title": "MH Marion — Personal Project",
   "thumb": {
    "src": "assets/images/mhmarion/01.webp",
-   "w": 1667,
-   "h": 2500,
+   "w": 1600,
+   "h": 2400,
    "fb": "assets/images/mhmarion/fb/01.jpg"
   },
   "main": {
    "src": "assets/images/mhmarion/01.webp",
-   "w": 1667,
-   "h": 2500,
+   "w": 1600,
+   "h": 2400,
    "fb": "assets/images/mhmarion/fb/01.jpg"
   },
   "items": [
    {
     "src": "assets/images/mhmarion/02.webp",
-    "w": 1667,
-    "h": 2500,
+    "w": 1600,
+    "h": 2400,
     "fb": "assets/images/mhmarion/fb/02.jpg"
    },
    {
     "src": "assets/images/mhmarion/03.webp",
-    "w": 1667,
-    "h": 2500,
+    "w": 1600,
+    "h": 2400,
     "fb": "assets/images/mhmarion/fb/03.jpg"
    },
    {
     "src": "assets/images/mhmarion/04.webp",
-    "w": 1667,
-    "h": 2500,
+    "w": 1600,
+    "h": 2400,
     "fb": "assets/images/mhmarion/fb/04.jpg"
    },
    {
     "src": "assets/images/mhmarion/05.webp",
-    "w": 1667,
-    "h": 2500,
+    "w": 1600,
+    "h": 2400,
     "fb": "assets/images/mhmarion/fb/05.jpg"
    },
    {
     "src": "assets/images/mhmarion/06.webp",
-    "w": 2500,
-    "h": 1667,
+    "w": 2400,
+    "h": 1600,
     "fb": "assets/images/mhmarion/fb/06.jpg"
    },
    {
     "src": "assets/images/mhmarion/07.webp",
-    "w": 1667,
-    "h": 2500
+    "w": 1600,
+    "h": 2400,
+    "fb": "assets/images/mhmarion/fb/07.jpg"
    },
    {
     "src": "assets/images/mhmarion/08.webp",
-    "w": 2364,
-    "h": 2500,
+    "w": 2269,
+    "h": 2400,
     "fb": "assets/images/mhmarion/fb/08.jpg"
    },
    {
     "src": "assets/images/mhmarion/09.webp",
-    "w": 1667,
-    "h": 2500,
+    "w": 1600,
+    "h": 2400,
     "fb": "assets/images/mhmarion/fb/09.jpg"
    },
    {
     "src": "assets/images/mhmarion/10.webp",
-    "w": 1667,
-    "h": 2500,
+    "w": 1600,
+    "h": 2400,
     "fb": "assets/images/mhmarion/fb/10.jpg"
    },
    {
     "src": "assets/images/mhmarion/11.webp",
-    "w": 1667,
-    "h": 2500,
+    "w": 1600,
+    "h": 2400,
     "fb": "assets/images/mhmarion/fb/11.jpg"
    },
    {
     "src": "assets/images/mhmarion/12.webp",
-    "w": 1667,
-    "h": 2500,
+    "w": 1600,
+    "h": 2400,
     "fb": "assets/images/mhmarion/fb/12.jpg"
    }
   ],
@@ -634,26 +641,26 @@ window.GALLERIES = {
   "items": [
    {
     "src": "assets/images/wrpd/02.webp",
-    "w": 5508,
-    "h": 6885,
+    "w": 1920,
+    "h": 2400,
     "fb": "assets/images/wrpd/fb/02.jpg"
    },
    {
     "src": "assets/images/wrpd/03.webp",
-    "w": 5506,
-    "h": 6883,
+    "w": 1920,
+    "h": 2400,
     "fb": "assets/images/wrpd/fb/03.jpg"
    },
    {
     "src": "assets/images/wrpd/04.webp",
-    "w": 6887,
-    "h": 5510,
+    "w": 2400,
+    "h": 1920,
     "fb": "assets/images/wrpd/fb/04.jpg"
    },
    {
     "src": "assets/images/wrpd/05.webp",
-    "w": 5510,
-    "h": 6887,
+    "w": 1920,
+    "h": 2400,
     "fb": "assets/images/wrpd/fb/05.jpg"
    },
    {
@@ -694,8 +701,8 @@ window.GALLERIES = {
   "items": [
    {
     "src": "assets/images/alien/02.webp",
-    "w": 1206,
-    "h": 2622,
+    "w": 1104,
+    "h": 2400,
     "fb": "assets/images/alien/fb/02.jpg"
    },
    {
@@ -824,14 +831,14 @@ window.GALLERIES = {
   "items": [
    {
     "src": "assets/images/acte/02.webp",
-    "w": 3572,
-    "h": 2270,
+    "w": 2400,
+    "h": 1525,
     "fb": "assets/images/acte/fb/02.jpg"
    },
    {
     "src": "assets/images/acte/03.webp",
-    "w": 3572,
-    "h": 526,
+    "w": 2400,
+    "h": 353,
     "fb": "assets/images/acte/fb/03.jpg"
    },
    {
@@ -985,20 +992,20 @@ window.GALLERIES = {
   "items": [
    {
     "src": "assets/images/l8/02.webp",
-    "w": 4800,
-    "h": 3500,
+    "w": 2400,
+    "h": 1750,
     "fb": "assets/images/l8/fb/02.jpg"
    },
    {
     "src": "assets/images/l8/03.webp",
-    "w": 3000,
-    "h": 2250,
+    "w": 2400,
+    "h": 1800,
     "fb": "assets/images/l8/fb/03.jpg"
    },
    {
     "src": "assets/images/l8/04.webp",
-    "w": 6916,
-    "h": 2700,
+    "w": 2400,
+    "h": 937,
     "fb": "assets/images/l8/fb/04.jpg"
    },
    {
@@ -1008,8 +1015,8 @@ window.GALLERIES = {
    },
    {
     "src": "assets/images/l8/06.webp",
-    "w": 2998,
-    "h": 1688,
+    "w": 2400,
+    "h": 1351,
     "fb": "assets/images/l8/fb/06.jpg"
    },
    {
@@ -1026,20 +1033,20 @@ window.GALLERIES = {
    },
    {
     "src": "assets/images/l8/09.webp",
-    "w": 2998,
-    "h": 1688,
+    "w": 2400,
+    "h": 1351,
     "fb": "assets/images/l8/fb/09.jpg"
    },
    {
     "src": "assets/images/l8/10.webp",
-    "w": 4856,
-    "h": 4694,
+    "w": 2400,
+    "h": 2320,
     "fb": "assets/images/l8/fb/10.jpg"
    },
    {
     "src": "assets/images/l8/11.webp",
-    "w": 6350,
-    "h": 3830,
+    "w": 2400,
+    "h": 1448,
     "fb": "assets/images/l8/fb/11.jpg"
    }
   ],
@@ -1140,8 +1147,8 @@ window.GALLERIES = {
    },
    {
     "src": "assets/images/mamika/08.webp",
-    "w": 3025,
-    "h": 1702,
+    "w": 2400,
+    "h": 1350,
     "fb": "assets/images/mamika/fb/08.jpg"
    }
   ],
@@ -1171,39 +1178,39 @@ window.GALLERIES = {
   "title": "Mamika Suzuki E-commerce Photography — Client project",
   "thumb": {
    "src": "assets/images/mamikashoot/01.webp",
-   "w": 3003,
-   "h": 3754,
+   "w": 1920,
+   "h": 2400,
    "fb": "assets/images/mamikashoot/fb/01.jpg"
   },
   "main": {
    "src": "assets/images/mamikashoot/01.webp",
-   "w": 3003,
-   "h": 3754,
+   "w": 1920,
+   "h": 2400,
    "fb": "assets/images/mamikashoot/fb/01.jpg"
   },
   "items": [
    {
     "src": "assets/images/mamikashoot/02.webp",
-    "w": 3264,
-    "h": 4080,
+    "w": 1920,
+    "h": 2400,
     "fb": "assets/images/mamikashoot/fb/02.jpg"
    },
    {
     "src": "assets/images/mamikashoot/03.webp",
-    "w": 2751,
-    "h": 3439,
+    "w": 1920,
+    "h": 2400,
     "fb": "assets/images/mamikashoot/fb/03.jpg"
    },
    {
     "src": "assets/images/mamikashoot/04.webp",
-    "w": 2540,
-    "h": 3175,
+    "w": 1920,
+    "h": 2400,
     "fb": "assets/images/mamikashoot/fb/04.jpg"
    },
    {
     "src": "assets/images/mamikashoot/05.webp",
-    "w": 2659,
-    "h": 3324,
+    "w": 1920,
+    "h": 2400,
     "fb": "assets/images/mamikashoot/fb/05.jpg"
    }
   ],

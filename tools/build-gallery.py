@@ -6,6 +6,9 @@ Usage: python3 tools/build-gallery.py [path/to/Portfolio_2026]
 Webp files are used first; a small resized jpg of the matching original
 (if one exists) is written next to each as a fallback."""
 import json, os, re, shutil, subprocess, sys
+from PIL import Image
+
+MAX_SIDE = 2400  # longest side kept in the site copies
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.expanduser(
@@ -131,7 +134,13 @@ for key, cat, folders, hover, title, details in CASES:
             ext = os.path.splitext(name)[1].lower()
             out = f'{n:02d}{ext}'
             shutil.copy(os.path.join(fdir, name), os.path.join(dest, out))
-            w, h = dims(os.path.join(dest, out))
+            path = os.path.join(dest, out)
+            if ext == '.webp':
+                im = Image.open(path)
+                if max(im.size) > MAX_SIDE:
+                    im.thumbnail((MAX_SIDE, MAX_SIDE), Image.LANCZOS)
+                    im.save(path, 'WEBP', quality=82, method=6)
+            w, h = dims(path)
             item = {'src': f'assets/images/{key}/{out}', 'w': w, 'h': h}
             orig = find_original(fdir, name)
             if orig:
