@@ -434,6 +434,7 @@ img { display: block; }
 .about .gallery__heading, .about .gallery__details { width: 100%; }
 .about .gallery__details-inner > p:not(.credit-heading) + p:not(.credit-heading) { margin-top: 10px; }
 #acc-about p { max-width: 540px; text-wrap: balance; }
+#acc-clients p { text-wrap: balance; }
 .about__social { display: flex; justify-content: center; gap: 14px; margin-top: 18px; }
 .about__social a { display: flex; width: 20px; height: 20px; }
 .social-icon { width: 20px; height: 20px; fill: var(--red); }
