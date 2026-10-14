@@ -1,0 +1,211 @@
+{
+ "alien": {
+  "hover": "Alien project",
+  "title": "Alien project",
+  "details": [
+   {
+    "t": "3D Nails & concept"
+   },
+   {
+    "h": "my role",
+    "t": "Art director, 3D designer, photographer, stylist, makeup artist, hair stylist, editor"
+   },
+   {
+    "h": "brief",
+    "t": "Build an alien world and create its artifacts."
+   },
+   {
+    "h": "concept",
+    "t": "Two parallel worlds collide and become obsessed with each other’s beauty. Aliens try to look human, and humans try to look alien. I 3D sculpted the aliens’ natural nails and a wearable press-on set for humans inspired by them, then created a photoshoot with fashion magazine covers from both worlds."
+   },
+   {
+    "h": "team credits",
+    "lines": [
+     "Model — Cornelia Borgfelt Liner"
+    ]
+   },
+   {
+    "h": "special thanks",
+    "lines": [
+     "Isabella Vercelli",
+     "Gustav Viklund",
+     "Maria Kling, Hyper Island"
+    ]
+   },
+   {
+    "h": "deliverables",
+    "t": "3D alien nails, 3D press-on nail set, photoshoot, magazine covers"
+   }
+  ]
+ },
+ "acte": {
+  "hover": "acté atelier",
+  "title": "acté atelier",
+  "details": [
+   {
+    "t": "Brand Identity Proposal"
+   },
+   {
+    "h": "my role",
+    "t": "Art director, graphic designer"
+   },
+   {
+    "h": "brief",
+    "t": "Create a visual identity for Acté Atelier, a lingerie brand designed around women’s hormonal health."
+   },
+   {
+    "h": "concept",
+    "t": "The logo combines three shapes: the uterus, a pair of panties and the letter A. Repeated as a pattern, the mark turned into something that resembles lace, connecting the brand’s focus on hormonal health with the craft of lingerie."
+   },
+   {
+    "h": "deliverables",
+    "t": "Logo, pattern, color palette, mockups"
+   }
+  ]
+ },
+ "haglofs": {
+  "hover": "Haglöfs, AI exploration",
+  "title": "Haglöfs, AI exploration",
+  "details": [
+   {
+    "t": "AI Visual Exploration. Hyper Island client project"
+   },
+   {
+    "h": "my role",
+    "t": "Team lead, AI and LoRA researcher, AI stills (LoRA training and generation)"
+   },
+   {
+    "h": "brief",
+    "t": "Explore how Haglöfs can integrate AI into their existing e-commerce photography to make it feel more premium, and create a roadmap for doing it at scale."
+   },
+   {
+    "h": "concept",
+    "t": "We created a visual direction and experimented with training LoRA models on Haglöfs’ existing images, to keep a consistent visual style across stills and video at a large scale. The result was a proposal and research base for Haglöfs to take the work forward in-house."
+   },
+   {
+    "h": "team credits",
+    "lines": [
+     "Team lead & creative director — Sofya Salnikova",
+     "AI stills (LoRA training & generation) — Gustav Viklund",
+     "AI video & researcher — Joon Kye",
+     "UX/UI designer & researcher — Maryam Maralani",
+     "UX/UI designer & researcher — Hailey Pack",
+     "Researcher — My Ronsten"
+    ]
+   },
+   {
+    "h": "special thanks",
+    "lines": [
+     "Bettina Schwalm, Hyper Island",
+     "Otis Ingelstam, Hyper Island",
+     "Harald Broström, Haglöfs"
+    ]
+   },
+   {
+    "h": "deliverables",
+    "t": "Visual direction, AI roadmap, LoRA training experiments, generated stills and video"
+   },
+   {
+    "t": "Made with Out of Office, a 7-person creative studio founded at Hyper Island."
+   }
+  ]
+ },
+ "l8": {
+  "hover": "Lotta Hasselblad",
+  "title": "Lotta Hasselblad",
+  "details": [
+   {
+    "t": "Rebrand Proposal. Hyper Island client project"
+   },
+   {
+    "h": "my role",
+    "t": "Team lead, PR and affiliate strategist, photographer sourcing, e-commerce and social media guidelines, assisting graphic designer and art director"
+   },
+   {
+    "h": "brief",
+    "t": "Rebrand L8 Hasselblad, a jewelry brand by designer Lotta Hasselblad, with a new brand book and visual direction."
+   },
+   {
+    "h": "concept",
+    "t": "L8 Hasselblad is known for its playful creativity and bold use of color. Lotta wanted to be seen as more premium, since her collection ranges from affordable pieces to high-end jewelry. We kept the colorful, expressive energy but refined it into a cleaner, more premium identity."
+   },
+   {
+    "h": "team credits",
+    "lines": [
+     "Design lead — Gustav Viklund",
+     "Art director — Malwina Kleparska",
+     "Coordinator — Ying Chen",
+     "Web designer — Ryan Sundin",
+     "Researcher — Evelina Benislavska"
+    ]
+   },
+   {
+    "h": "special thanks",
+    "lines": [
+     "Lotta Hasselblad, L8 Hasselblad",
+     "Caroline Lönnquist, L8 Hasselblad",
+     "Mattias Mattisson, Hyper Island"
+    ]
+   },
+   {
+    "h": "deliverables",
+    "lines": [
+     "Identity: logo, wordmark, brand colors, illustrations",
+     "Guidelines: brand book, social media, e-commerce",
+     "Design: website, mockups, physical store concept",
+     "Strategy: PR affiliates, photographer suggestions"
+    ]
+   }
+  ]
+ },
+ "mamika": {
+  "hover": "Mamika Suzuki",
+  "title": "Mamika Suzuki",
+  "details": [
+   {
+    "t": "Brand Identity"
+   },
+   {
+    "h": "my role",
+    "t": "Art director, graphic designer"
+   },
+   {
+    "h": "brief",
+    "t": "Create a visual identity for Mamika Suzuki, a handmade silver jewelry brand."
+   },
+   {
+    "h": "concept",
+    "t": "The logo combines an M and an S, based on Mamika’s own drawing and shaped like melted silver, reflecting her handmade process. The client wanted purple, so I chose a deep shade to give the brand a mysterious feel, paired with off-white for a softer contrast than pure white."
+   },
+   {
+    "h": "deliverables",
+    "t": "Logo, wordmark, brand colors, photography direction, mockups"
+   }
+  ]
+ },
+ "mamikashoot": {
+  "hover": "Mamika Suzuki Photography",
+  "title": "Mamika Suzuki Photography",
+  "details": [
+   {
+    "t": "E-commerce Photography"
+   },
+   {
+    "h": "my role",
+    "t": "Art director, photographer"
+   },
+   {
+    "h": "brief",
+    "t": "Create product photography for Mamika Suzuki’s online store, following the new brand direction."
+   },
+   {
+    "h": "concept",
+    "t": "To make the brand feel mysterious, the photos are dark with a completely black background, leaving space for the hand and the silver jewelry to stand out. The contrast lets the silver catch the light, which highlights the handmade details."
+   },
+   {
+    "h": "deliverables",
+    "t": "E-commerce product images"
+   }
+  ]
+ }
+}

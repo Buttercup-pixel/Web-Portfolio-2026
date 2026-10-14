@@ -663,8 +663,8 @@ window.GALLERIES = {
  "alien": {
   "key": "alien",
   "category": "digital",
-  "hover": "Alien — School project",
-  "title": "Alien 3D Nails & Editorial — Hyper Island",
+  "hover": "Alien project",
+  "title": "Alien project",
   "thumb": {
    "src": "assets/images/alien/01.webp?v=06bbd96f",
    "w": 2160,
@@ -720,16 +720,19 @@ window.GALLERIES = {
   ],
   "details": [
    {
+    "t": "3D Nails & concept"
+   },
+   {
+    "h": "my role",
+    "t": "Art director, 3D designer, photographer, stylist, makeup artist, hair stylist, editor"
+   },
+   {
     "h": "brief",
     "t": "Build an alien world and create its artifacts."
    },
    {
     "h": "concept",
     "t": "Two parallel worlds collide and become obsessed with each other’s beauty. Aliens try to look human, and humans try to look alien. I 3D sculpted the aliens’ natural nails and a wearable press-on set for humans inspired by them, then created a photoshoot with fashion magazine covers from both worlds."
-   },
-   {
-    "h": "my role",
-    "t": "Art director, 3D designer, photographer, stylist, makeup artist, hair stylist, editor"
    },
    {
     "h": "team credits",
@@ -754,8 +757,8 @@ window.GALLERIES = {
  "acte": {
   "key": "acte",
   "category": "digital",
-  "hover": "Acté Atelier — Brand identity",
-  "title": "Acté Atelier Brand Identity Proposal — Hyper Island client project",
+  "hover": "acté atelier",
+  "title": "acté atelier",
   "thumb": {
    "src": "assets/images/acte/01.webp?v=d8ec8ea2",
    "w": 1040,
@@ -808,16 +811,19 @@ window.GALLERIES = {
   ],
   "details": [
    {
+    "t": "Brand Identity Proposal"
+   },
+   {
+    "h": "my role",
+    "t": "Art director, graphic designer"
+   },
+   {
     "h": "brief",
     "t": "Create a visual identity for Acté Atelier, a lingerie brand designed around women’s hormonal health."
    },
    {
     "h": "concept",
     "t": "The logo combines three shapes: the uterus, a pair of panties and the letter A. Repeated as a pattern, the mark turned into something that resembles lace, connecting the brand’s focus on hormonal health with the craft of lingerie."
-   },
-   {
-    "h": "my role",
-    "t": "Art director, graphic designer"
    },
    {
     "h": "deliverables",
@@ -828,8 +834,8 @@ window.GALLERIES = {
  "haglofs": {
   "key": "haglofs",
   "category": "digital",
-  "hover": "Haglöfs — AI exploration",
-  "title": "Haglöfs AI Visual Exploration — Hyper Island client project",
+  "hover": "Haglöfs, AI exploration",
+  "title": "Haglöfs, AI exploration",
   "thumb": {
    "src": "assets/images/haglofs/01.webp?v=65ccfe06",
    "w": 1200,
@@ -878,16 +884,19 @@ window.GALLERIES = {
   ],
   "details": [
    {
+    "t": "AI Visual Exploration. Hyper Island client project"
+   },
+   {
+    "h": "my role",
+    "t": "Team lead, AI and LoRA researcher, AI stills (LoRA training and generation)"
+   },
+   {
     "h": "brief",
     "t": "Explore how Haglöfs can integrate AI into their existing e-commerce photography to make it feel more premium, and create a roadmap for doing it at scale."
    },
    {
     "h": "concept",
     "t": "We created a visual direction and experimented with training LoRA models on Haglöfs’ existing images, to keep a consistent visual style across stills and video at a large scale. The result was a proposal and research base for Haglöfs to take the work forward in-house."
-   },
-   {
-    "h": "my role",
-    "t": "Team lead, AI and LoRA researcher, AI stills (LoRA training and generation)"
    },
    {
     "h": "team credits",
@@ -920,8 +929,8 @@ window.GALLERIES = {
  "l8": {
   "key": "l8",
   "category": "digital",
-  "hover": "L8 Hasselblad — Rebrand",
-  "title": "L8 Hasselblad Rebrand Proposal — Hyper Island client project",
+  "hover": "Lotta Hasselblad",
+  "title": "Lotta Hasselblad",
   "thumb": {
    "src": "assets/images/l8/01.webp?v=07509c72",
    "w": 2400,
@@ -974,16 +983,19 @@ window.GALLERIES = {
   ],
   "details": [
    {
+    "t": "Rebrand Proposal. Hyper Island client project"
+   },
+   {
+    "h": "my role",
+    "t": "Team lead, PR and affiliate strategist, photographer sourcing, e-commerce and social media guidelines, assisting graphic designer and art director"
+   },
+   {
     "h": "brief",
     "t": "Rebrand L8 Hasselblad, a jewelry brand by designer Lotta Hasselblad, with a new brand book and visual direction."
    },
    {
     "h": "concept",
     "t": "L8 Hasselblad is known for its playful creativity and bold use of color. Lotta wanted to be seen as more premium, since her collection ranges from affordable pieces to high-end jewelry. We kept the colorful, expressive energy but refined it into a cleaner, more premium identity."
-   },
-   {
-    "h": "my role",
-    "t": "Team lead, PR and affiliate strategist, photographer sourcing, e-commerce and social media guidelines, assisting graphic designer and art director"
    },
    {
     "h": "team credits",
@@ -1017,8 +1029,8 @@ window.GALLERIES = {
  "mamika": {
   "key": "mamika",
   "category": "digital",
-  "hover": "Mamika Suzuki — Brand identity",
-  "title": "Mamika Suzuki Brand Identity — Client project",
+  "hover": "Mamika Suzuki",
+  "title": "Mamika Suzuki",
   "thumb": {
    "src": "assets/images/mamika/01.webp?v=b83f2e04",
    "w": 638,
@@ -1065,16 +1077,19 @@ window.GALLERIES = {
   ],
   "details": [
    {
+    "t": "Brand Identity"
+   },
+   {
+    "h": "my role",
+    "t": "Art director, graphic designer"
+   },
+   {
     "h": "brief",
     "t": "Create a visual identity for Mamika Suzuki, a handmade silver jewelry brand."
    },
    {
     "h": "concept",
     "t": "The logo combines an M and an S, based on Mamika’s own drawing and shaped like melted silver, reflecting her handmade process. The client wanted purple, so I chose a deep shade to give the brand a mysterious feel, paired with off-white for a softer contrast than pure white."
-   },
-   {
-    "h": "my role",
-    "t": "Art director, graphic designer"
    },
    {
     "h": "deliverables",
@@ -1085,8 +1100,8 @@ window.GALLERIES = {
  "mamikashoot": {
   "key": "mamikashoot",
   "category": "digital",
-  "hover": "Mamika Suzuki — Photography",
-  "title": "Mamika Suzuki E-commerce Photography — Client project",
+  "hover": "Mamika Suzuki Photography",
+  "title": "Mamika Suzuki Photography",
   "thumb": {
    "src": "assets/images/mamikashoot/01.webp?v=86fa6181",
    "w": 1920,
@@ -1127,16 +1142,19 @@ window.GALLERIES = {
   ],
   "details": [
    {
+    "t": "E-commerce Photography"
+   },
+   {
+    "h": "my role",
+    "t": "Art director, photographer"
+   },
+   {
     "h": "brief",
     "t": "Create product photography for Mamika Suzuki’s online store, following the new brand direction."
    },
    {
     "h": "concept",
     "t": "To make the brand feel mysterious, the photos are dark with a completely black background, leaving space for the hand and the silver jewelry to stand out. The contrast lets the silver catch the light, which highlights the handmade details."
-   },
-   {
-    "h": "my role",
-    "t": "Art director, photographer"
    },
    {
     "h": "deliverables",

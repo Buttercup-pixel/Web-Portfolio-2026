@@ -91,6 +91,10 @@ CASES = [
         {'h': 'deliverables', 't': 'E-commerce product images'}]),
 ]
 
+# Digital titles and details come from the Work Text Digital doc.
+DIGITAL_TEXT = json.load(open(os.path.join(REPO, 'tools', 'digital-text.json')))
+CASES = [(k, c, f, DIGITAL_TEXT[k]['hover'], DIGITAL_TEXT[k]['title'], DIGITAL_TEXT[k]['details']) if k in DIGITAL_TEXT else (k, c, f, h, t, d) for k, c, f, h, t, d in CASES]
+
 # Logo-style thumbnails are contained on a light tile instead of cropped.
 CONTAIN = {'acte', 'mamika'}
 PAIR_PORTRAITS = {'metalhead'}  # keep portraits paired, landscapes alone
