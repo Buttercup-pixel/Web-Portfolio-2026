@@ -353,6 +353,7 @@
   });
 
   $('#overlay-backdrop').addEventListener('click', closeGallery);
+  $$('.back-btn').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); closeGallery(); }));
 
   infoBtn.addEventListener('click', (e) => { e.stopPropagation(); setInfo(!details.classList.contains('is-open')); });
   title.addEventListener('click', (e) => { e.stopPropagation(); setInfo(!details.classList.contains('is-open')); });

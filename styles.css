@@ -14,8 +14,8 @@
   --muted: rgb(120, 120, 120);
   --font: "Typewriter_Condensed Regular", sans-serif;
   /* The original references an undefined "Typewriter_Condensed" family in a few places, so those fall back: */
-  --font-fallback: "Typewriter_Condensed", "Arial Narrow", Arial, sans-serif;
-  --font-mono: "Typewriter_Condensed", "Courier New", Courier, monospace;
+  --font-fallback: "Typewriter_Condensed Regular", "Arial Narrow", Arial, sans-serif;
+  --font-mono: "Typewriter_Condensed Regular", "Courier New", Courier, monospace;
 
   --pad: 32px;          /* header side padding */
   --content: 624px;     /* grid width */
@@ -233,7 +233,7 @@ img { display: block; }
   font-size: 28px;
   letter-spacing: 0.08em;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: lowercase;
   white-space: nowrap;
   transform: translate(-50%, -50%);
@@ -399,8 +399,22 @@ img { display: block; }
   .gallery__supporting { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 809.98px) {
-  .panel { padding-top: 140px; }
+  .panel { padding-top: 140px; padding-bottom: 120px; }
+  #about-panel { padding-top: 140px; }
+  .hint { font-size: 21px; gap: 8px; }
+  .hint svg { width: 28px; height: 28px; }
+  .panel .back-btn { display: flex; }
 }
+
+/* Back to the front page (mobile only) */
+.back-btn {
+  display: none;
+  align-items: center; gap: 6px;
+  padding: 8px 6px;
+  font-size: 16px; line-height: 1; letter-spacing: 1.28px;
+  color: var(--red);
+}
+.back-btn .icon { width: 20px; height: 20px; stroke: var(--red); }
 
 @media (prefers-reduced-motion: reduce) {
   .hint { animation: none; }
