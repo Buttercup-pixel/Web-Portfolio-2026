@@ -131,9 +131,10 @@
     const gap = 10;
     const vw = stripTrack.clientWidth - 16;
     const n = order.length;
-    const size = Math.min(170, Math.max(56, Math.ceil((vw - 12 - n * gap) / (n - 1)) + 2));
+    const size = Math.min(190, Math.max(56, Math.ceil(Math.ceil((vw - 12 - n * gap) / (n - 1)) * 1.1)));
     stripTrack.style.setProperty('--thumb', `${size}px`);
     stripTrack.scrollLeft = setWidth() * 2;
+    syncBar();
   }
   window.addEventListener('resize', () => { if (!overlay.hidden) sizeStrip(); });
   function setWidth() {
@@ -146,7 +147,14 @@
     if (stripTrack.scrollLeft < w) stripTrack.scrollLeft += w;
     else if (stripTrack.scrollLeft >= w * 3) stripTrack.scrollLeft -= w;
   }
-  stripTrack.addEventListener('scroll', loopStrip, { passive: true });
+  const bar = $('#strip-bar');
+  function syncBar() {
+    const w = setWidth();
+    if (!w) return;
+    const frac = (((stripTrack.scrollLeft - w) % w) + w) % w / w;
+    bar.style.left = `${frac * 70}%`;
+  }
+  stripTrack.addEventListener('scroll', () => { loopStrip(); syncBar(); }, { passive: true });
   // At the bottom of a project, scrolling further slides the filmstrip sideways.
   panel.addEventListener('wheel', (e) => {
     if (!current || !e.deltaY) return;
@@ -289,8 +297,6 @@
   });
 
   $('#overlay-backdrop').addEventListener('click', closeGallery);
-  $('#strip-prev').addEventListener('click', () => step(-1));
-  $('#strip-next').addEventListener('click', () => step(1));
 
   infoBtn.addEventListener('click', (e) => { e.stopPropagation(); setInfo(!details.classList.contains('is-open')); });
   title.addEventListener('click', (e) => { e.stopPropagation(); setInfo(!details.classList.contains('is-open')); });
