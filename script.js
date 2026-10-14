@@ -116,7 +116,7 @@
         if (g.key === key) b.classList.add('is-current');
         b.setAttribute('aria-label', g.hover);
         b.title = g.hover;
-        b.append(makeImg(g.thumb, '', true));
+        b.append(makeImg({ src: (g.tile || g.thumb).src, fb: g.thumb.fb }, '', true));
         b.addEventListener('click', () => go(g.key));
         stripTrack.append(b);
       });
@@ -273,9 +273,13 @@
         const v = document.createElement('video');
         v.src = it.video;
         v.poster = it.src;
-        v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
+        v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'none';
         v.setAttribute('aria-hidden', 'true');
         box.append(v);
+        // Only load and play while it is near the screen.
+        new IntersectionObserver(([e]) => {
+          if (e.isIntersecting) v.play().catch(() => {}); else v.pause();
+        }, { rootMargin: '150px' }).observe(v);
       } else {
         box.append(makeImg(it, '', true));
       }

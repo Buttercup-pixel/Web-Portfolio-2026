@@ -8,7 +8,8 @@ Webp files are used first; a small resized jpg of the matching original
 import hashlib, json, os, re, shutil, subprocess, sys
 from PIL import Image
 
-MAX_SIDE = 2400  # longest side kept in the site copies
+MAX_SIDE = 1600  # longest side kept in the site copies (2x of the widest display size)
+TILE_MIN, TILE_MAX = 600, 1100  # small copy used for the front-page tile and filmstrip
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.expanduser('~/Library/Mobile Documents/com~apple~CloudDocs/Portfolio_2026')
@@ -178,6 +179,15 @@ for key, cat, folders, hover, title, details in CASES:
             names.append(name)
     if not os.listdir(os.path.join(dest, 'fb')):
         os.rmdir(os.path.join(dest, 'fb'))
+    tile = None
+    first = os.path.join(REPO, imgs[0]['src'].split('?')[0])
+    with Image.open(first) as im0:
+        sc = max(TILE_MIN / min(im0.size), 0.0)
+        sc = min(sc, 1.0, TILE_MAX / max(im0.size))
+        t = im0.convert('RGB').resize((max(1, round(im0.width * sc)), max(1, round(im0.height * sc))), Image.LANCZOS) if sc < 1 else im0.convert('RGB')
+        tpath = os.path.join(dest, 'tile.webp')
+        t.save(tpath, 'WEBP', quality=80, method=6)
+        tile = {'src': tag(f'assets/images/{key}/tile.webp'), 'w': t.width, 'h': t.height}
     main, rest = imgs[0], imgs[1:]
     if key in VIDEOS:
         vsrc, vname, poster = VIDEOS[key]
@@ -188,7 +198,7 @@ for key, cat, folders, hover, title, details in CASES:
                 it['video'] = vurl
         main, rest = imgs[0], imgs[1:]
     data[key] = {'key': key, 'category': cat, 'hover': hover, 'title': title,
-                 'thumb': imgs[0], 'main': main, 'items': rest, 'details': details,
+                 'thumb': imgs[0], 'tile': tile, 'main': main, 'items': rest, 'details': details,
                  **({'pairPortraits': True} if key in PAIR_PORTRAITS else {})}
     order.append(key)
     print(f'{key}: {len(imgs)} images')
@@ -201,11 +211,12 @@ def col(cat, cid, extra):
     rows = []
     for i, key in enumerate([k for k in order if data[k]['category'] == cat], 1):
         d = data[key]
-        t = d['thumb']
+        t = d.get('tile') or d['thumb']
+        fbsrc = d['thumb'].get('fb')
         cls = 'item item--logo' if key in CONTAIN else 'item'
         pos = POSITION.get(key, '50% 35%')
-        fb = f' onerror="this.onerror=null;this.src=\'{t["fb"]}\'"' if 'fb' in t else ''
-        eager = 'decoding="async"' if i == 1 else 'loading="lazy" decoding="async"'
+        fb = f' onerror="this.onerror=null;this.src=\'{fbsrc}\'"' if fbsrc else ''
+        eager = 'fetchpriority="high" decoding="async"' if (i == 1 and cat == 'makeup') else 'loading="lazy" decoding="async"'
         rows.append(
             f'        <div class="{cls}" id="{cat}-{i}" tabindex="0" data-category="{cat}" '
             f'data-title="{esc(d["hover"])}" data-gallery="{key}">\n'
@@ -219,7 +230,7 @@ def col(cat, cid, extra):
 html_path = os.path.join(REPO, 'index.html')
 html = open(html_path).read()
 a = html.index('      <div class="col col--up"')
-b = html.index('    </div>\n\n    <a class="goup goup--page"')
+b = html.index('    </div>\n  </main>')
 html = html[:a] + col('makeup', 'col--up', '') + '\n' + col('digital', 'col--down', '') + html[b:]
 open(html_path, 'w').write(html)
 print('done')
