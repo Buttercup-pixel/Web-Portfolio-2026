@@ -34,7 +34,7 @@ CASES = [
     ('wrpd', 'makeup', ['Makeup/WRPD/Webp'], 'WRPD Mag', 'WRPD Mag', credits('wrpd')),
 
     ('alien', 'digital',
-     ['Digital/Alien/Webp'],
+     ['Digital/1. Alien/Webp'],
      'Alien — School project', 'Alien 3D Nails & Editorial — Hyper Island', [
         {'h': 'brief', 't': 'Build an alien world and create its artifacts.'},
         {'h': 'concept', 't': 'Two parallel worlds collide and become obsessed with each other’s beauty. Aliens try to look human, and humans try to look alien. I 3D sculpted the aliens’ natural nails and a wearable press-on set for humans inspired by them, then created a photoshoot with fashion magazine covers from both worlds.'},
@@ -42,13 +42,13 @@ CASES = [
         {'h': 'team credits', 'lines': ['Model — Cornelia Borgfelt Liner']},
         {'h': 'special thanks', 'lines': ['Isabella Vercelli', 'Gustav Viklund', 'Maria Kling, Hyper Island']},
         {'h': 'deliverables', 't': '3D alien nails, 3D press-on nail set, photoshoot, magazine covers'}]),
-    ('acte', 'digital', ['Digital/Acté Atelier/Webp'],
+    ('acte', 'digital', ['Digital/2. Acté Atelier/Webp'],
      'Acté Atelier — Brand identity', 'Acté Atelier Brand Identity Proposal — Hyper Island client project', [
         {'h': 'brief', 't': 'Create a visual identity for Acté Atelier, a lingerie brand designed around women’s hormonal health.'},
         {'h': 'concept', 't': 'The logo combines three shapes: the uterus, a pair of panties and the letter A. Repeated as a pattern, the mark turned into something that resembles lace, connecting the brand’s focus on hormonal health with the craft of lingerie.'},
         {'h': 'my role', 't': 'Art director, graphic designer'},
         {'h': 'deliverables', 't': 'Logo, pattern, color palette, mockups'}]),
-    ('haglofs', 'digital', ['Digital/Haglöfs/Webp'],
+    ('haglofs', 'digital', ['Digital/3. Haglöfs/Webp'],
      'Haglöfs — AI exploration', 'Haglöfs AI Visual Exploration — Hyper Island client project', [
         {'h': 'brief', 't': 'Explore how Haglöfs can integrate AI into their existing e-commerce photography to make it feel more premium, and create a roadmap for doing it at scale.'},
         {'h': 'concept', 't': 'We created a visual direction and experimented with training LoRA models on Haglöfs’ existing images, to keep a consistent visual style across stills and video at a large scale. The result was a proposal and research base for Haglöfs to take the work forward in-house.'},
@@ -63,7 +63,19 @@ CASES = [
         {'h': 'special thanks', 'lines': ['Bettina Schwalm, Hyper Island', 'Otis Ingelstam, Hyper Island', 'Harald Broström, Haglöfs']},
         {'h': 'deliverables', 't': 'Visual direction, AI roadmap, LoRA training experiments, generated stills and video'},
         {'t': 'Made with Out of Office, a 7-person creative studio founded at Hyper Island.'}]),
-    ('l8', 'digital', ['Digital/L8Hasselblad/Webp'],
+    ('mamika', 'digital', ['Digital/4. Mamika Suzuki/Webp'],
+     'Mamika Suzuki — Brand identity', 'Mamika Suzuki Brand Identity — Client project', [
+        {'h': 'brief', 't': 'Create a visual identity for Mamika Suzuki, a handmade silver jewelry brand.'},
+        {'h': 'concept', 't': 'The logo combines an M and an S, based on Mamika’s own drawing and shaped like melted silver, reflecting her handmade process. The client wanted purple, so I chose a deep shade to give the brand a mysterious feel, paired with off-white for a softer contrast than pure white.'},
+        {'h': 'my role', 't': 'Art director, graphic designer'},
+        {'h': 'deliverables', 't': 'Logo, wordmark, brand colors, photography direction, mockups'}]),
+    ('mamikashoot', 'digital', ['Digital/5. Mamika Photoshoot/Webp'],
+     'Mamika Suzuki — Photography', 'Mamika Suzuki E-commerce Photography — Client project', [
+        {'h': 'brief', 't': 'Create product photography for Mamika Suzuki’s online store, following the new brand direction.'},
+        {'h': 'concept', 't': 'To make the brand feel mysterious, the photos are dark with a completely black background, leaving space for the hand and the silver jewelry to stand out. The contrast lets the silver catch the light, which highlights the handmade details.'},
+        {'h': 'my role', 't': 'Art director, photographer'},
+        {'h': 'deliverables', 't': 'E-commerce product images'}]),
+    ('l8', 'digital', ['Digital/6. L8Hasselblad/Webp'],
      'L8 Hasselblad — Rebrand', 'L8 Hasselblad Rebrand Proposal — Hyper Island client project', [
         {'h': 'brief', 't': 'Rebrand L8 Hasselblad, a jewelry brand by designer Lotta Hasselblad, with a new brand book and visual direction.'},
         {'h': 'concept', 't': 'L8 Hasselblad is known for its playful creativity and bold use of color. Lotta wanted to be seen as more premium, since her collection ranges from affordable pieces to high-end jewelry. We kept the colorful, expressive energy but refined it into a cleaner, more premium identity.'},
@@ -77,18 +89,6 @@ CASES = [
             'Guidelines: brand book, social media, e-commerce',
             'Design: website, mockups, physical store concept',
             'Strategy: PR affiliates, photographer suggestions']}]),
-    ('mamika', 'digital', ['Digital/Mamika Suzuki/Webp'],
-     'Mamika Suzuki — Brand identity', 'Mamika Suzuki Brand Identity — Client project', [
-        {'h': 'brief', 't': 'Create a visual identity for Mamika Suzuki, a handmade silver jewelry brand.'},
-        {'h': 'concept', 't': 'The logo combines an M and an S, based on Mamika’s own drawing and shaped like melted silver, reflecting her handmade process. The client wanted purple, so I chose a deep shade to give the brand a mysterious feel, paired with off-white for a softer contrast than pure white.'},
-        {'h': 'my role', 't': 'Art director, graphic designer'},
-        {'h': 'deliverables', 't': 'Logo, wordmark, brand colors, photography direction, mockups'}]),
-    ('mamikashoot', 'digital', ['Digital/Mamika Photoshoot/Webp'],
-     'Mamika Suzuki — Photography', 'Mamika Suzuki E-commerce Photography — Client project', [
-        {'h': 'brief', 't': 'Create product photography for Mamika Suzuki’s online store, following the new brand direction.'},
-        {'h': 'concept', 't': 'To make the brand feel mysterious, the photos are dark with a completely black background, leaving space for the hand and the silver jewelry to stand out. The contrast lets the silver catch the light, which highlights the handmade details.'},
-        {'h': 'my role', 't': 'Art director, photographer'},
-        {'h': 'deliverables', 't': 'E-commerce product images'}]),
 ]
 
 # Digital titles and details come from the Work Text Digital doc.
@@ -100,7 +100,7 @@ CONTAIN = {'acte', 'mamika'}
 PAIR_PORTRAITS = {'metalhead'}  # keep portraits paired, landscapes alone
 POSITION = {'alien': '42% 50%'}  # per-key object-position overrides, e.g. {'domina': '50% 20%'}
 # key: (video file, name in assets, webp that is the video's poster and gets replaced by it)
-VIDEOS = {'alien': ('Digital/Alien/Digital_3DAlien_1.mp4', 'alien-loop.mp4', 'Digital_Alien_7webp.webp')}
+VIDEOS = {'alien': ('Digital/1. Alien/Digital_3DAlien_1.mp4', 'alien-loop.mp4', 'Digital_Alien_7webp.webp')}
 
 
 def natkey(name):

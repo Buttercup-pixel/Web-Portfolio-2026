@@ -926,106 +926,6 @@ window.GALLERIES = {
    }
   ]
  },
- "l8": {
-  "key": "l8",
-  "category": "digital",
-  "hover": "Lotta Hasselblad",
-  "title": "Lotta Hasselblad",
-  "thumb": {
-   "src": "assets/images/l8/01.webp?v=07509c72",
-   "w": 2400,
-   "h": 1750,
-   "fb": "assets/images/l8/fb/01.jpg?v=d7161984"
-  },
-  "main": {
-   "src": "assets/images/l8/01.webp?v=07509c72",
-   "w": 2400,
-   "h": 1750,
-   "fb": "assets/images/l8/fb/01.jpg?v=d7161984"
-  },
-  "items": [
-   {
-    "src": "assets/images/l8/02.webp?v=f7c305ea",
-    "w": 2400,
-    "h": 937,
-    "fb": "assets/images/l8/fb/02.jpg?v=17f00e61"
-   },
-   {
-    "src": "assets/images/l8/03.webp?v=4c6e3dd5",
-    "w": 593,
-    "h": 488,
-    "fb": "assets/images/l8/fb/03.jpg?v=a75db46b"
-   },
-   {
-    "src": "assets/images/l8/04.webp?v=209a809c",
-    "w": 2400,
-    "h": 1800,
-    "fb": "assets/images/l8/fb/04.jpg?v=27ca2ba5"
-   },
-   {
-    "src": "assets/images/l8/05.webp?v=b6217f2c",
-    "w": 2400,
-    "h": 1351,
-    "fb": "assets/images/l8/fb/05.jpg?v=c276ac53"
-   },
-   {
-    "src": "assets/images/l8/06.webp?v=95d876ee",
-    "w": 2400,
-    "h": 1351,
-    "fb": "assets/images/l8/fb/06.jpg?v=c1744499"
-   },
-   {
-    "src": "assets/images/l8/07.webp?v=d7163acf",
-    "w": 2400,
-    "h": 1448,
-    "fb": "assets/images/l8/fb/07.jpg?v=b825324c"
-   }
-  ],
-  "details": [
-   {
-    "t": "Rebrand Proposal. Hyper Island client project"
-   },
-   {
-    "h": "my role",
-    "t": "Team lead, PR and affiliate strategist, photographer sourcing, e-commerce and social media guidelines, assisting graphic designer and art director"
-   },
-   {
-    "h": "brief",
-    "t": "Rebrand L8 Hasselblad, a jewelry brand by designer Lotta Hasselblad, with a new brand book and visual direction."
-   },
-   {
-    "h": "concept",
-    "t": "L8 Hasselblad is known for its playful creativity and bold use of color. Lotta wanted to be seen as more premium, since her collection ranges from affordable pieces to high-end jewelry. We kept the colorful, expressive energy but refined it into a cleaner, more premium identity."
-   },
-   {
-    "h": "team credits",
-    "lines": [
-     "Design lead — Gustav Viklund",
-     "Art director — Malwina Kleparska",
-     "Coordinator — Ying Chen",
-     "Web designer — Ryan Sundin",
-     "Researcher — Evelina Benislavska"
-    ]
-   },
-   {
-    "h": "special thanks",
-    "lines": [
-     "Lotta Hasselblad, L8 Hasselblad",
-     "Caroline Lönnquist, L8 Hasselblad",
-     "Mattias Mattisson, Hyper Island"
-    ]
-   },
-   {
-    "h": "deliverables",
-    "lines": [
-     "Identity: logo, wordmark, brand colors, illustrations",
-     "Guidelines: brand book, social media, e-commerce",
-     "Design: website, mockups, physical store concept",
-     "Strategy: PR affiliates, photographer suggestions"
-    ]
-   }
-  ]
- },
  "mamika": {
   "key": "mamika",
   "category": "digital",
@@ -1159,6 +1059,106 @@ window.GALLERIES = {
    {
     "h": "deliverables",
     "t": "E-commerce product images"
+   }
+  ]
+ },
+ "l8": {
+  "key": "l8",
+  "category": "digital",
+  "hover": "Lotta Hasselblad",
+  "title": "Lotta Hasselblad",
+  "thumb": {
+   "src": "assets/images/l8/01.webp?v=07509c72",
+   "w": 2400,
+   "h": 1750,
+   "fb": "assets/images/l8/fb/01.jpg?v=d7161984"
+  },
+  "main": {
+   "src": "assets/images/l8/01.webp?v=07509c72",
+   "w": 2400,
+   "h": 1750,
+   "fb": "assets/images/l8/fb/01.jpg?v=d7161984"
+  },
+  "items": [
+   {
+    "src": "assets/images/l8/02.webp?v=f7c305ea",
+    "w": 2400,
+    "h": 937,
+    "fb": "assets/images/l8/fb/02.jpg?v=17f00e61"
+   },
+   {
+    "src": "assets/images/l8/03.webp?v=4c6e3dd5",
+    "w": 593,
+    "h": 488,
+    "fb": "assets/images/l8/fb/03.jpg?v=a75db46b"
+   },
+   {
+    "src": "assets/images/l8/04.webp?v=209a809c",
+    "w": 2400,
+    "h": 1800,
+    "fb": "assets/images/l8/fb/04.jpg?v=27ca2ba5"
+   },
+   {
+    "src": "assets/images/l8/05.webp?v=b6217f2c",
+    "w": 2400,
+    "h": 1351,
+    "fb": "assets/images/l8/fb/05.jpg?v=c276ac53"
+   },
+   {
+    "src": "assets/images/l8/06.webp?v=95d876ee",
+    "w": 2400,
+    "h": 1351,
+    "fb": "assets/images/l8/fb/06.jpg?v=c1744499"
+   },
+   {
+    "src": "assets/images/l8/07.webp?v=d7163acf",
+    "w": 2400,
+    "h": 1448,
+    "fb": "assets/images/l8/fb/07.jpg?v=b825324c"
+   }
+  ],
+  "details": [
+   {
+    "t": "Rebrand Proposal. Hyper Island client project"
+   },
+   {
+    "h": "my role",
+    "t": "Team lead, PR and affiliate strategist, photographer sourcing, e-commerce and social media guidelines, assisting graphic designer and art director"
+   },
+   {
+    "h": "brief",
+    "t": "Rebrand L8 Hasselblad, a jewelry brand by designer Lotta Hasselblad, with a new brand book and visual direction."
+   },
+   {
+    "h": "concept",
+    "t": "L8 Hasselblad is known for its playful creativity and bold use of color. Lotta wanted to be seen as more premium, since her collection ranges from affordable pieces to high-end jewelry. We kept the colorful, expressive energy but refined it into a cleaner, more premium identity."
+   },
+   {
+    "h": "team credits",
+    "lines": [
+     "Design lead — Gustav Viklund",
+     "Art director — Malwina Kleparska",
+     "Coordinator — Ying Chen",
+     "Web designer — Ryan Sundin",
+     "Researcher — Evelina Benislavska"
+    ]
+   },
+   {
+    "h": "special thanks",
+    "lines": [
+     "Lotta Hasselblad, L8 Hasselblad",
+     "Caroline Lönnquist, L8 Hasselblad",
+     "Mattias Mattisson, Hyper Island"
+    ]
+   },
+   {
+    "h": "deliverables",
+    "lines": [
+     "Identity: logo, wordmark, brand colors, illustrations",
+     "Guidelines: brand book, social media, e-commerce",
+     "Design: website, mockups, physical store concept",
+     "Strategy: PR affiliates, photographer suggestions"
+    ]
    }
   ]
  }
