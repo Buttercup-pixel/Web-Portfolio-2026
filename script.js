@@ -92,17 +92,39 @@
   const infoBtn = $('#info-btn');
   const details = $('#gallery-details');
   const detailsInner = details.querySelector('.gallery__details-inner');
-  const nextBtn = $('#next-btn');
-  const nextLabel = $('#next-label');
-  const nextBg = $('#next-bg');
+  const strip = $('#strip');
+  const stripTrack = $('#strip-track');
   const mainBox = $('#gallery-main');
   const supporting = $('#gallery-supporting');
   const galleries = window.GALLERIES || {};
   let current = null;
   let lastFocus = null;
 
-  function syncNext() {
-    nextBtn.classList.toggle('is-visible', panel.scrollTop > 24);
+  const order = Object.values(galleries);
+  order.forEach((g) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = `strip__thumb${['acte', 'l8', 'mamika'].includes(g.key) ? ' strip__thumb--logo' : ''}`;
+    b.dataset.key = g.key;
+    b.setAttribute('aria-label', g.hover);
+    b.title = g.hover;
+    const im = makeImg(g.thumb, '', true);
+    b.append(im);
+    b.addEventListener('click', () => go(g.key));
+    stripTrack.append(b);
+  });
+  function go(key) { openGallery($(`.item[data-gallery="${key}"]`)); }
+  function step(dir) {
+    if (!current) return;
+    const i = order.findIndex((g) => g.key === current.key);
+    go(order[(i + dir + order.length) % order.length].key);
+  }
+  function syncStrip() {
+    $$('.strip__thumb', stripTrack).forEach((t) => {
+      const on = t.dataset.key === current.key;
+      t.classList.toggle('is-current', on);
+      if (on) t.scrollIntoView({ inline: 'center', block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
+    });
   }
   function setInfo(open) {
     // Animate to the content's real height rather than a fixed guess —
@@ -205,21 +227,14 @@
     renderMain(d);
     renderDetails(d.details);
     renderSupporting(d);
-    const next = nextOf(d);
-    nextLabel.textContent = `Next ${d.category.toUpperCase()}`;
-    nextBg.src = next.thumb.src;
     lastFocus = trigger || document.activeElement;
     closeAbout(true);
     setInfo(false);
     overlay.hidden = false;
     panel.scrollTop = 0;
-    syncNext();
+    syncStrip();
     setLabel(null);
     panel.focus({ preventScroll: true });
-  }
-  function nextOf(d) {
-    const keys = $$(`.item[data-category="${d.category}"]`).map((i) => i.dataset.gallery);
-    return galleries[keys[(keys.indexOf(d.key) + 1) % keys.length]];
   }
   function closeGallery() {
     if (overlay.hidden) return;
@@ -229,7 +244,6 @@
 
   panel.tabIndex = -1;
   panel.style.outline = 'none';
-  panel.addEventListener('scroll', syncNext, { passive: true });
 
   $$('.item[data-gallery]').forEach((item) => {
     item.addEventListener('click', () => openGallery(item));
@@ -239,12 +253,8 @@
   });
 
   $('#overlay-backdrop').addEventListener('click', closeGallery);
-  nextBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (!current) return;
-    const n = nextOf(current);
-    openGallery($(`.item[data-gallery="${n.key}"]`));
-  });
+  $('#strip-prev').addEventListener('click', () => step(-1));
+  $('#strip-next').addEventListener('click', () => step(1));
 
   infoBtn.addEventListener('click', (e) => { e.stopPropagation(); setInfo(!details.classList.contains('is-open')); });
   title.addEventListener('click', (e) => { e.stopPropagation(); setInfo(!details.classList.contains('is-open')); });
@@ -287,6 +297,10 @@
 
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') { closeGallery(); closeAbout(); }
+    if (!overlay.hidden && about.hidden) {
+      if (e.key === 'ArrowRight') step(1);
+      if (e.key === 'ArrowLeft') step(-1);
+    }
   });
 
   /* ---------- "Leave a trace" drawing board ---------- */

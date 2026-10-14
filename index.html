@@ -11,7 +11,7 @@
   <meta property="og:image" content="assets/images/domina/01.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="assets/fonts/Typewriter_Condensed.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261014-4">
+  <link rel="stylesheet" href="styles.css?v=20261014-5">
 </head>
 <body>
 
@@ -145,11 +145,11 @@
 
       <div class="gallery__supporting" id="gallery-supporting"></div>
     </section>
-    <button class="next-btn" id="next-btn" type="button">
-      <svg class="icon" aria-hidden="true"><use href="#i-right"/></svg>
-      <span id="next-label">Next MAKEUP</span>
-      <div class="next-btn__bg"><img id="next-bg" src="" alt=""></div>
-    </button>
+    <nav class="strip" id="strip" aria-label="Cases">
+      <button class="strip__arrow" id="strip-prev" type="button" aria-label="Previous case"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
+      <div class="strip__track" id="strip-track"></div>
+      <button class="strip__arrow" id="strip-next" type="button" aria-label="Next case"><svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></button>
+    </nav>
   </div>
 
   <!-- About overlay -->
@@ -209,7 +209,7 @@
     </section>
   </div>
 
-  <script src="gallery-data.js?v=20261014-4"></script>
-  <script src="script.js?v=20261014-4"></script>
+  <script src="gallery-data.js?v=20261014-5"></script>
+  <script src="script.js?v=20261014-5"></script>
 </body>
 </html>
