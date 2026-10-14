@@ -104,7 +104,7 @@
   let catOrder = [];
   function buildStrip(cat, key) {
     catOrder = all.filter((g) => g.category === cat);
-    order = catOrder.filter((g) => g.key !== key);
+    order = catOrder;
     $('#strip-title').textContent = `other in ${cat}`;
     stripTrack.replaceChildren();
     {
@@ -113,6 +113,7 @@
         b.type = 'button';
         b.className = `strip__thumb${['acte', 'l8', 'mamika'].includes(g.key) ? ' strip__thumb--logo' : ''}`;
         b.dataset.key = g.key;
+        if (g.key === key) b.classList.add('is-current');
         b.setAttribute('aria-label', g.hover);
         b.title = g.hover;
         b.append(makeImg(g.thumb, '', true));
@@ -129,7 +130,8 @@
     const n = order.length;
     const size = Math.min(190, Math.max(56, Math.ceil(Math.ceil((vw - 12 - n * gap) / (n - 1)) * 1.1)));
     stripTrack.style.setProperty('--thumb', `${size}px`);
-    stripTrack.scrollLeft = 0;
+    const cur = stripTrack.querySelector('.is-current');
+    stripTrack.scrollLeft = cur ? cur.offsetLeft - (stripTrack.clientWidth - cur.offsetWidth) / 2 : 0;
     syncBar();
   }
   window.addEventListener('resize', () => { if (!overlay.hidden) sizeStrip(); });
