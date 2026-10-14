@@ -328,7 +328,7 @@ img { display: block; }
   transform: translateX(-50%);
   width: min(1060px, 100vw);
   height: 100vh;
-  padding: 110px 20px 220px;
+  padding: 110px 20px 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -402,29 +402,24 @@ img { display: block; }
 .photo--wide, .photo--solo { grid-column: span 2; width: min(var(--w, 100%), 100%); justify-self: center; }
 .photo--half { aspect-ratio: 382 / 490; }
 
-/* Case strip along the bottom of the gallery panel */
+/* Filmstrip: sits at the end of each project and scrolls with it */
 .strip {
-  position: fixed;
-  z-index: 6;
-  left: 0; right: 0; bottom: 0;
+  width: min(780px, 100%); flex: none;
   display: flex; align-items: center; justify-content: center;
   gap: 8px;
-  padding: 18px 16px 20px;
-  background: linear-gradient(to top, rgba(249, 249, 249, 0.96) 55%, rgba(249, 249, 249, 0));
-  pointer-events: none;
+  margin-top: 28px;
 }
-.strip > * { pointer-events: auto; }
 .strip__track {
   display: flex; align-items: center; gap: 10px;
-  max-width: min(960px, calc(100vw - 96px));
-  padding: 14px 8px;
+  max-width: calc(100% - 80px);
+  padding: 16px 8px;
   overflow-x: auto;
   scrollbar-width: none;
 }
 .strip__track::-webkit-scrollbar { display: none; }
 .strip__thumb {
   flex: none;
-  width: 52px; height: 52px;
+  width: 56px; height: 56px;
   overflow: hidden;
   opacity: 0.5;
   filter: blur(1.5px);
@@ -440,7 +435,7 @@ img { display: block; }
 .strip__arrow .icon { width: 28px; height: 28px; }
 
 @media (max-width: 859.98px) {
-  .panel { padding: 100px 16px 220px; }
+  .panel { padding: 100px 16px 140px; }
   .gallery__heading, .gallery__supporting, .gallery__details { width: 100%; }
   .gallery__details-inner { padding: 0 12px; }
   .gallery__supporting { grid-template-columns: repeat(2, minmax(0, 1fr)); }

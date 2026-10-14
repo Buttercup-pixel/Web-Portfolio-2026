@@ -92,27 +92,33 @@
   const infoBtn = $('#info-btn');
   const details = $('#gallery-details');
   const detailsInner = details.querySelector('.gallery__details-inner');
-  const strip = $('#strip');
-  const stripTrack = $('#strip-track');
+    const stripTrack = $('#strip-track');
   const mainBox = $('#gallery-main');
   const supporting = $('#gallery-supporting');
   const galleries = window.GALLERIES || {};
   let current = null;
   let lastFocus = null;
 
-  const order = Object.values(galleries);
-  order.forEach((g) => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = `strip__thumb${['acte', 'l8', 'mamika'].includes(g.key) ? ' strip__thumb--logo' : ''}`;
-    b.dataset.key = g.key;
-    b.setAttribute('aria-label', g.hover);
-    b.title = g.hover;
-    const im = makeImg(g.thumb, '', true);
-    b.append(im);
-    b.addEventListener('click', () => go(g.key));
-    stripTrack.append(b);
-  });
+  const all = Object.values(galleries);
+  let order = [];
+  let stripCat = null;
+  function buildStrip(cat) {
+    if (cat === stripCat) return;
+    stripCat = cat;
+    order = all.filter((g) => g.category === cat);
+    stripTrack.replaceChildren();
+    order.forEach((g) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = `strip__thumb${['acte', 'l8', 'mamika'].includes(g.key) ? ' strip__thumb--logo' : ''}`;
+      b.dataset.key = g.key;
+      b.setAttribute('aria-label', g.hover);
+      b.title = g.hover;
+      b.append(makeImg(g.thumb, '', true));
+      b.addEventListener('click', () => go(g.key));
+      stripTrack.append(b);
+    });
+  }
   function go(key) { openGallery($(`.item[data-gallery="${key}"]`)); }
   function step(dir) {
     if (!current) return;
@@ -123,7 +129,7 @@
     $$('.strip__thumb', stripTrack).forEach((t) => {
       const on = t.dataset.key === current.key;
       t.classList.toggle('is-current', on);
-      if (on) t.scrollIntoView({ inline: 'center', block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
+      if (on) stripTrack.scrollLeft = t.offsetLeft - (stripTrack.clientWidth - t.offsetWidth) / 2;
     });
   }
   function setInfo(open) {
@@ -232,6 +238,7 @@
     setInfo(false);
     overlay.hidden = false;
     panel.scrollTop = 0;
+    buildStrip(d.category);
     syncStrip();
     setLabel(null);
     panel.focus({ preventScroll: true });
@@ -262,7 +269,7 @@
   // Click anywhere inside the panel that isn't a photo (or the credits
   // accordion) closes it too.
   panel.addEventListener('click', (e) => {
-    if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') return;
+    if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('#strip')) return;
     closeGallery();
   });
 
