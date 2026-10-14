@@ -474,8 +474,15 @@ img { display: block; }
   text-transform: lowercase;
   color: var(--red);
 }
-.about__copy p, .about__contact p { font-size: 16px; line-height: 1.35; color: var(--ink); }
+.about__clients { display: flex; flex-direction: column; gap: 6px; }
+.about__clients h2 {
+  margin: 0 0 4px;
+  font-size: 24px; line-height: 1.1; font-weight: 400;
+  letter-spacing: 1.92px; text-transform: lowercase; color: var(--red);
+}
+.about__clients p, .about__copy p, .about__contact p { font-size: 16px; line-height: 1.35; color: var(--ink); }
 .about__copy p { text-wrap: balance; }
+.about__clients p span, .about__contact p span { color: var(--red); margin-right: 6px; }
 
 .about__contact { display: flex; flex-direction: column; gap: 6px; }
 .about__social { display: flex; gap: 12px; }
