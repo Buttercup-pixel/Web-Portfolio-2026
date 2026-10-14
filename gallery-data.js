@@ -1052,22 +1052,16 @@ window.GALLERIES = {
     "fb": "assets/images/mamika/fb/04.jpg?v=ec99ed06"
    },
    {
-    "src": "assets/images/mamika/05.webp?v=970d24f6",
+    "src": "assets/images/mamika/05.webp?v=1cb53cba",
     "w": 1374,
     "h": 1145,
-    "fb": "assets/images/mamika/fb/05.jpg?v=adf1c8ff"
+    "fb": "assets/images/mamika/fb/05.jpg?v=86f4f4b9"
    },
    {
-    "src": "assets/images/mamika/06.webp?v=1cb53cba",
-    "w": 1374,
-    "h": 1145,
-    "fb": "assets/images/mamika/fb/06.jpg?v=86f4f4b9"
-   },
-   {
-    "src": "assets/images/mamika/07.webp?v=464fc023",
+    "src": "assets/images/mamika/06.webp?v=464fc023",
     "w": 2400,
     "h": 1350,
-    "fb": "assets/images/mamika/fb/07.jpg?v=79450996"
+    "fb": "assets/images/mamika/fb/06.jpg?v=79450996"
    }
   ],
   "details": [
