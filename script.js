@@ -364,12 +364,14 @@
   const about = $('#about');
   const aboutPanel = $('#about-panel');
   const aboutBtn = $('#about-btn');
+  const aboutVideo = $('#about-video');
 
   function openAbout() {
     closeGallery();
     about.hidden = false;
     aboutBtn.setAttribute('aria-expanded', 'true');
     aboutPanel.scrollTop = 0;
+    if (!reduced) aboutVideo.play().catch(() => {});
     setLabel(null);
     sizeBoard();
     aboutPanel.focus({ preventScroll: true });
@@ -377,6 +379,7 @@
   function closeAbout(silent) {
     if (about.hidden) return;
     about.hidden = true;
+    aboutVideo.pause();
     aboutBtn.setAttribute('aria-expanded', 'false');
     if (!silent) aboutBtn.focus({ preventScroll: true });
   }

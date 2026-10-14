@@ -427,8 +427,7 @@ img { display: block; }
 .about > * { width: min(780px, 100%); flex: none; }
 
 .about__portrait { height: 480px; overflow: hidden; }
-.about__portrait picture { display: block; width: 100%; height: 100%; }
-.about__portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 16%; }
+.about__portrait video { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
 
 .about__acc { display: flex; flex-direction: column; align-items: center; gap: 16px; }
 .about .gallery__heading, .about .gallery__details { width: 100%; }
