@@ -102,13 +102,12 @@
   const all = Object.values(galleries);
   let order = [];
   let catOrder = [];
-  const COPIES = 5;
   function buildStrip(cat, key) {
     catOrder = all.filter((g) => g.category === cat);
     order = catOrder.filter((g) => g.key !== key);
     $('#strip-title').textContent = `other in ${cat}`;
     stripTrack.replaceChildren();
-    for (let c = 0; c < COPIES; c++) {
+    {
       order.forEach((g) => {
         const b = document.createElement('button');
         b.type = 'button';
@@ -116,7 +115,6 @@
         b.dataset.key = g.key;
         b.setAttribute('aria-label', g.hover);
         b.title = g.hover;
-        if (c !== 2) { b.tabIndex = -1; b.setAttribute('aria-hidden', 'true'); }
         b.append(makeImg(g.thumb, '', true));
         b.addEventListener('click', () => go(g.key));
         stripTrack.append(b);
@@ -124,8 +122,6 @@
     }
     sizeStrip();
   }
-  // Make one full set of thumbnails at least as wide as the visible strip, so
-  // a project never shows up twice at once while the strip loops.
   function sizeStrip() {
     if (!order.length || !stripTrack.clientWidth) return;
     const gap = 10;
@@ -133,34 +129,26 @@
     const n = order.length;
     const size = Math.min(190, Math.max(56, Math.ceil(Math.ceil((vw - 12 - n * gap) / (n - 1)) * 1.1)));
     stripTrack.style.setProperty('--thumb', `${size}px`);
-    stripTrack.scrollLeft = setWidth() * 2;
+    stripTrack.scrollLeft = 0;
     syncBar();
   }
   window.addEventListener('resize', () => { if (!overlay.hidden) sizeStrip(); });
-  function setWidth() {
-    const t = stripTrack.children;
-    return t.length > order.length ? t[order.length].offsetLeft - t[0].offsetLeft : 0;
-  }
-  function loopStrip() {
-    const w = setWidth();
-    if (!w) return;
-    if (stripTrack.scrollLeft < w) stripTrack.scrollLeft += w;
-    else if (stripTrack.scrollLeft >= w * 3) stripTrack.scrollLeft -= w;
-  }
   const bar = $('#strip-bar');
   function syncBar() {
-    const w = setWidth();
-    if (!w) return;
-    const frac = (((stripTrack.scrollLeft - w) % w) + w) % w / w;
-    bar.style.left = `${frac * 70}%`;
+    const max = stripTrack.scrollWidth - stripTrack.clientWidth;
+    bar.style.left = `${max > 0 ? (stripTrack.scrollLeft / max) * 70 : 0}%`;
   }
-  stripTrack.addEventListener('scroll', () => { loopStrip(); syncBar(); }, { passive: true });
-  // At the bottom of a project, scrolling further slides the filmstrip sideways.
+  stripTrack.addEventListener('scroll', syncBar, { passive: true });
+  // Wheel over the filmstrip, or scrolling further at the bottom of a project,
+  // slides the filmstrip sideways.
   panel.addEventListener('wheel', (e) => {
     if (!current || !e.deltaY) return;
     const overStrip = e.target.closest && e.target.closest('#strip');
     const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 2;
     if (!overStrip && !(atBottom && e.deltaY > 0)) return;
+    const max = stripTrack.scrollWidth - stripTrack.clientWidth;
+    const canMove = e.deltaY > 0 ? stripTrack.scrollLeft < max - 1 : stripTrack.scrollLeft > 0;
+    if (!canMove) return;
     e.preventDefault();
     stripTrack.scrollLeft += e.deltaY;
   }, { passive: false });
