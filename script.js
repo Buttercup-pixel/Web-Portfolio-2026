@@ -384,8 +384,23 @@
 
   // Tap anywhere in the about panel closes it, except on links or the
   // drawing board (so people can actually use those).
+  $$('.about__acc').forEach((acc) => {
+    const btn = $('.info-btn', acc);
+    const box = $('.gallery__details', acc);
+    const inner = $('.gallery__details-inner', acc);
+    const toggle = () => {
+      const open = !box.classList.contains('is-open');
+      box.style.maxHeight = open ? `${inner.scrollHeight}px` : '0px';
+      box.classList.toggle('is-open', open);
+      btn.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    };
+    btn.addEventListener('click', toggle);
+    $('h2', acc).addEventListener('click', toggle);
+  });
+
   aboutPanel.addEventListener('click', (e) => {
-    if (e.target.closest('a, #trace')) return;
+    if (e.target.closest('a, #trace, .about__acc')) return;
     closeAbout();
   });
 

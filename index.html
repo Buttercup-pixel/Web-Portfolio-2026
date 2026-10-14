@@ -24,7 +24,7 @@
   <meta name="twitter:image" content="https://buttercup-pixel.github.io/Web-Portfolio-2026/assets/share.jpg">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Johanna Nordlander","jobTitle":"Makeup artist and art director","email":"mailto:johannanordlandermua@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Stockholm","addressCountry":"SE"},"url":"https://buttercup-pixel.github.io/Web-Portfolio-2026/","sameAs":["https://www.instagram.com/johanna_nordlander/","https://www.linkedin.com/in/johanna-nordlander-70b20875/"]}</script>
   <link rel="preload" href="assets/fonts/Typewriter_Condensed.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261014-45">
+  <link rel="stylesheet" href="styles.css?v=20261014-47">
 </head>
 <body>
 
@@ -165,31 +165,63 @@
   <div class="overlay" id="about" hidden>
     <div class="overlay__backdrop"></div>
     <div class="overlay__veil"></div>
-    <section class="about" id="about-panel" role="dialog" aria-modal="true" aria-labelledby="about-title" tabindex="-1">
+    <section class="about" id="about-panel" role="dialog" aria-modal="true" aria-label="About Johanna Nordlander" tabindex="-1">
       <div class="about__portrait"><picture><source srcset="assets/images/about-portrait.webp?v=2" type="image/webp"><img src="assets/images/about-portrait.jpg?v=2" alt="Portrait of Johanna Nordlander"></picture></div>
 
-      <div class="about__copy">
-        <h1 id="about-title">about</h1>
-        <p>Hi, I’m Johanna, based in Stockholm. I’ve spent 13+ years doing makeup for fashion, beauty and music, and somewhere along the way I wanted to shape the whole picture. So now I do art direction too.</p>
-        <p>Every year I get a new obsession. It’s been baking, crochet, pole dancing, nail art. This year it’s chess.</p>
-        <p>Let’s talk over a game, or just a fika.</p>
-      </div>
-
-      <div class="about__clients">
-        <h2>clients</h2>
-        <p><span>brands</span> H&amp;M, H&amp;M Beauty, Chanel Beauty, Acne Studios, Filippa K, Our Legacy, Weekday, Asket, Monki, Kicks</p>
-        <p><span>artists</span> Zara Larsson, Tove Lo, Lykke Li, Loreen, Veronica Maggio, Agnes, Seinabo Sey, Icona Pop, Tove Styrke, Daniela Rathana, Miriam Bryant, Bella Hadid, Stella Maxwell</p>
-        <p><span>runway</span> Dior, Gucci, Fendi</p>
-        <p><span>publications</span> Vogue Scandinavia, Elle Sverige, Le Mile, The Greatest, Odalisque</p>
-      </div>
-
-      <div class="about__contact">
-        <div class="about__social">
-          <a href="https://www.instagram.com/johanna_nordlander/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 16 16"><use href="#i-instagram"/></svg></a>
-          <a href="https://www.linkedin.com/in/johanna-nordlander-70b20875/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 16 16"><use href="#i-linkedin"/></svg></a>
+      <div class="about__acc">
+        <div class="gallery__heading">
+          <h2>about</h2>
+          <button class="info-btn" type="button" aria-expanded="false" aria-controls="acc-about" aria-label="Toggle about">
+            <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg>
+          </button>
         </div>
-        <p><span>contact</span> <a href="mailto:johannanordlandermua@gmail.com">johannanordlandermua@gmail.com</a></p>
-        <p>makeup represented by <a href="https://www.linkdetails.com/artist/johanna-nordlander/" target="_blank" rel="noopener">Link Details</a></p>
+        <div class="gallery__details" id="acc-about">
+          <div class="gallery__details-inner">
+            <p>Hi, I’m Johanna, based in Stockholm. I’ve spent 13+ years doing makeup for fashion, beauty and music, and somewhere along the way I wanted to shape the whole picture. So now I do art direction too.</p>
+            <p>Every year I get a new obsession. It’s been baking, crochet, pole dancing, nail art. This year it’s chess.</p>
+            <p>Let’s talk over a game, or just a fika.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__acc">
+        <div class="gallery__heading">
+          <h2>clients</h2>
+          <button class="info-btn" type="button" aria-expanded="false" aria-controls="acc-clients" aria-label="Toggle clients">
+            <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg>
+          </button>
+        </div>
+        <div class="gallery__details" id="acc-clients">
+          <div class="gallery__details-inner">
+            <p class="credit-heading">brands</p>
+            <p>H&amp;M, H&amp;M Beauty, Chanel Beauty, Acne Studios, Filippa K, Our Legacy, Weekday, Asket, Monki, Kicks</p>
+            <p class="credit-heading">artists</p>
+            <p>Zara Larsson, Tove Lo, Lykke Li, Loreen, Veronica Maggio, Agnes, Seinabo Sey, Icona Pop, Tove Styrke, Daniela Rathana, Miriam Bryant, Bella Hadid, Stella Maxwell</p>
+            <p class="credit-heading">runway</p>
+            <p>Dior, Gucci, Fendi</p>
+            <p class="credit-heading">publications</p>
+            <p>Vogue Scandinavia, Elle Sverige, Le Mile, The Greatest, Odalisque</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__acc">
+        <div class="gallery__heading">
+          <h2>contact</h2>
+          <button class="info-btn" type="button" aria-expanded="false" aria-controls="acc-contact" aria-label="Toggle contact">
+            <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg>
+          </button>
+        </div>
+        <div class="gallery__details" id="acc-contact">
+          <div class="gallery__details-inner">
+            <p><a href="mailto:johannanordlandermua@gmail.com">johannanordlandermua@gmail.com</a></p>
+            <p>makeup represented by <a href="https://www.linkdetails.com/artist/johanna-nordlander/" target="_blank" rel="noopener">Link Details</a></p>
+            <div class="about__social">
+              <a href="https://www.instagram.com/johanna_nordlander/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 16 16"><use href="#i-instagram"/></svg></a>
+              <a href="https://www.linkedin.com/in/johanna-nordlander-70b20875/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 16 16"><use href="#i-linkedin"/></svg></a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <section class="trace" id="trace">
@@ -218,7 +250,7 @@
     </section>
   </div>
 
-  <script src="gallery-data.js?v=20261014-45"></script>
-  <script src="script.js?v=20261014-45"></script>
+  <script src="gallery-data.js?v=20261014-47"></script>
+  <script src="script.js?v=20261014-47"></script>
 </body>
 </html>
