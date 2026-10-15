@@ -988,20 +988,20 @@ window.GALLERIES = {
   "hover": "Mamika Suzuki",
   "title": "Mamika Suzuki",
   "thumb": {
-   "src": "assets/images/mamika/01.webp?v=b83f2e04",
-   "w": 638,
-   "h": 639,
+   "src": "assets/images/mamika/01.webp?v=b65e6a55",
+   "w": 1276,
+   "h": 1276,
    "fb": "assets/images/mamika/fb/01.jpg?v=4f0ad89c"
   },
   "tile": {
-   "src": "assets/images/mamika/tile.webp?v=bafa8d0e",
+   "src": "assets/images/mamika/tile.webp?v=83ec4e05",
    "w": 600,
-   "h": 601
+   "h": 600
   },
   "main": {
-   "src": "assets/images/mamika/01.webp?v=b83f2e04",
-   "w": 638,
-   "h": 639,
+   "src": "assets/images/mamika/01.webp?v=b65e6a55",
+   "w": 1276,
+   "h": 1276,
    "fb": "assets/images/mamika/fb/01.jpg?v=4f0ad89c"
   },
   "items": [
