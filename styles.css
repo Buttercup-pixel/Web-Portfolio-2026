@@ -346,6 +346,8 @@ img { display: block; }
 .gallery__details-inner a:hover { color: var(--red); }
 .gallery__details-inner .credit-heading:not(:first-child) { margin-top: 12px; }
 .gallery__details-inner .credit-heading { font-size: 18px; line-height: 1.35; color: var(--hover-red); }
+.gallery__details-inner .credit-heading--group:not(:first-child) { margin-top: 28px; }
+.gallery__details-inner .credit-subheading { font-size: 14px; line-height: 1.35; color: var(--muted); margin-top: 10px; }
 
 .gallery__supporting {
   width: 780px; flex: none;
